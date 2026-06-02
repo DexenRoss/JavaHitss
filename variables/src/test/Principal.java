@@ -1,7 +1,9 @@
 package test;
 
-import variables.Ejemplo;
-import variables.Persona;
+//import variables.Contador;
+//import variables.Ejemplo;
+//import variables.Persona;
+import variables.*;
 
 public class Principal {
     public static void main(String[] args) {
@@ -18,5 +20,11 @@ public class Principal {
         persona2.edad = 26;
         persona2.nombre="Emilio";
         persona2.mostrar();
+
+        System.out.println("---------Variables Estaticas---------");
+        new Contador();
+        new Contador();
+        new Contador();
+        System.out.println("Total de objetos: "+ Contador.total);
     }
 }
