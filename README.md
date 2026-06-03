@@ -3,7 +3,7 @@ Semillero de Talentos.
 Camino por HITSS
 
 Arbol de Trabajo
-
+```text
 variables
 |
 |--README.md
@@ -29,4 +29,4 @@ variables
     |--variables
         |  
         |--App.java
-
+```
