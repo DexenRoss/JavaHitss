@@ -4,10 +4,27 @@ Camino por HITSS
 
 Arbol de Trabajo
 ```text
+controlFlujo
+|
+|--src
+    |
+    |--condicionales
+    |   |
+    |   |--Condicional.java
+    |   |--ParImpar.java
+    |   |--Calificacion.java
+    |   |--Positivos.java
+    |
+    |--App.java
 variables
 |
 |--README.md
 |--src
+    |
+    |--cadenas
+    |   |
+    |   |--MetodosString.java
+    |   |--ProgramaManejoDeNombres.java
     |
     |--entrada
     |   |
@@ -26,7 +43,12 @@ variables
     |   |--Casteos.java
     |   |--TiposDatos.java
     |
-    |--variables
-        |  
-        |--App.java
+    |--variables    
+    |   |  
+    |   |--Contador.java
+    |   |--Ejemplo.java
+    |   |--Persona.java
+    |
+    |--App.java
+    
 ```
