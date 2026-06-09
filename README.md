@@ -4,51 +4,12 @@ Camino por HITSS
 
 Arbol de Trabajo
 ```text
-controlFlujo
+Proyectos
 |
-|--src
-    |
-    |--condicionales
-    |   |
-    |   |--Condicional.java
-    |   |--ParImpar.java
-    |   |--Calificacion.java
-    |   |--Positivos.java
-    |
-    |--App.java
-variables
+|---controlFlujo
+|       |-- Se ve la estructura de ciclos y comandos condicionales
 |
-|--README.md
-|--src
-    |
-    |--cadenas
-    |   |
-    |   |--MetodosString.java
-    |   |--ProgramaManejoDeNombres.java
-    |
-    |--entrada
-    |   |
-    |   |---LecturaUsuario.java
-    |
-    |--operadores
-    |   |
-    |   |--Operandos.java
-    |
-    |--test
-    |   |
-    |   |--Princiapl.java
-    |
-    |--tipos
-    |   |
-    |   |--Casteos.java
-    |   |--TiposDatos.java
-    |
-    |--variables    
-    |   |  
-    |   |--Contador.java
-    |   |--Ejemplo.java
-    |   |--Persona.java
-    |
-    |--App.java
+|---variables
+        |-- Se vieron variables primitivas y cosas basicas
     
 ```
