@@ -23,7 +23,8 @@ public class ValidarDatos {
             
             
         }
-        System.out.println("Bloqueado Temporalmente");
         sc.close();
+        System.out.println("Bloqueado Temporalmente");
+        
     }
 }
