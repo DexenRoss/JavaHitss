@@ -1,3 +1,3 @@
 ## Getting Started
 
-En esta clase se Vieron los tipos primitivos de Java, variables y como crear clases.
+Aqui Se ve como crear variables y la sintaxis de Java
