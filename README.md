@@ -10,6 +10,9 @@ Proyectos
 |       |-- Se ve la estructura de ciclos y comandos condicionales
 |
 |---variables
-        |-- Se vieron variables primitivas y cosas basicas
+|        |-- Se vieron variables primitivas y cosas basicas
+|
+|---arreglos
+|        |-- Se vieron creacion y llenado de arreglos
     
 ```
