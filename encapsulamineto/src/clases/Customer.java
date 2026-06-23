@@ -6,10 +6,12 @@ public class Customer {
     private String email;
 
 
+    
+
     public Customer(String name, String email) {
         this.id++;
-        this.name = name;
-        this.email = email;
+        updateName(name);
+        updateEmail(email);
     }
 
     public static int getId() {
@@ -35,8 +37,23 @@ public class Customer {
         this.email = email;
     }
 
+
+    public void updateName(String name){
+        if (name == null || name.isBlank()) {
+            throw new IllegalArgumentException("Invalid name");
+        }
+        this.name = name;
+    }
+
     public void showInformation(){
         System.out.println("ID: %d\tNombre: %s\tEmail: %s".formatted(id,name,email));
+    }
+
+    public void updateEmail(String email){
+        if (email == null || !email.matches("^[A-Za-z0-9+_.-]+@[A-Aa-z0-9.-]+$")) {
+            throw new IllegalArgumentException("Invalid email");
+        }
+        this.email = email;
     }
 
     

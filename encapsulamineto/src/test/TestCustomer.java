@@ -7,7 +7,6 @@ public class TestCustomer {
         Customer customer = new Customer("Emilio","emi@gmail.com");
         customer.showInformation();
         Customer customer2 = new Customer("", null);
-        
         customer2.showInformation();
 
     }
