@@ -1,5 +1,5 @@
 package classes;
 
-public class Career {
+public class Career{
     
 }
