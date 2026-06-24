@@ -5,9 +5,6 @@ import padre.Employee;
 public class Administrative extends Employee{
     String department;
 
-    public Administrative(){
-
-    }
 
     public Administrative(String name, int age, double salary,String department){
         super(name,age,salary);
@@ -32,5 +29,10 @@ public class Administrative extends Employee{
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    @Override
+    public void showInformation(){
+        System.out.println("admin1: %s\tSalary: %f\tDepartment %s\t Bono this year: %f".formatted(getName(),getSalary(),getDepartment(),calculateBonusYear()));
     }
 }

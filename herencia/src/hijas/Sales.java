@@ -21,4 +21,9 @@ public class Sales extends Employee {
         return salesMonth;
     }
 
+    @Override
+    public void showInformation(){
+        System.out.println("admin1: %s\tSalary: %f\t Bono this month: %f".formatted(getName(),getSalary(),getComission()));
+    }
+
 }
