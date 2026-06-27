@@ -6,11 +6,14 @@ Repositorio de práctica para el **Semillero de Talentos HITSS**, enfocado en re
 
 Este repositorio documenta mi avance en Java: desde variables y control de flujo hasta arreglos, matrices, encapsulamiento, herencia, clases padre/hijas, constructores, getters/setters, validaciones y sobrescritura de métodos.
 
+El objetivo final del camino es aplicar estos fundamentos en un **proyecto con Spring Boot**, integrando Java orientado a objetos con el desarrollo de aplicaciones backend modernas.
+
 ## Tecnologías usadas
 
 - Java
 - VS Code
 - Git y GitHub
+- Spring Boot, como siguiente etapa del proyecto
 
 ## Estructura del repositorio
 
@@ -25,7 +28,7 @@ JavaHitss/
 ├── arreglos/
 │   └── Prácticas con arreglos, métodos de Arrays, ordenamiento, búsquedas y matrices.
 │
-├── encapsulamineto/
+├── encapsulamiento/
 │   └── Ejercicios de encapsulamiento con atributos privados, getters, setters y validaciones.
 │
 └── herencia/
@@ -40,8 +43,9 @@ JavaHitss/
 | `variables` | Fundamentos de Java | Variables primitivas, operadores matemáticos/lógicos, `instanceof` y entrada con `Scanner`. |
 | `controlFlujo` | Flujo de control | Condicionales `if`, `switch`, ciclos `for`, `while`, ciclos anidados y números aleatorios. |
 | `arreglos` | Arreglos y matrices | Creación, llenado y recorrido de arreglos; `Arrays.sort`, `Arrays.fill`, `Arrays.binarySearch`, `Arrays.copyOf`, matrices y cálculo de promedios. |
-| `encapsulamineto` | Encapsulamiento | Atributos privados, acceso mediante getters/setters, métodos de actualización y validaciones de datos. |
+| `encapsulamiento` | Encapsulamiento | Atributos privados, acceso mediante getters/setters, métodos de actualización y validaciones de datos. |
 | `herencia` | Programación orientada a objetos | Clases `Person`, `Employee`, `Teacher`, `Administrative`, `Sales`, herencia, composición, constructores, excepciones y `@Override`. |
+| `Spring Boot` | Siguiente etapa | Desarrollo de un proyecto backend aplicando los fundamentos aprendidos durante el semillero. |
 
 ## Cómo ejecutar los ejercicios
 
@@ -73,6 +77,7 @@ java test.Test
 - [x] Herencia y composición
 - [x] Constructores con validaciones
 - [x] Sobrescritura de métodos con `@Override`
+- [ ] Proyecto final con Spring Boot
 
 ## Autor
 
