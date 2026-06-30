@@ -3,6 +3,8 @@ package test;
 import clases.Car;
 import clases.Circle;
 import clases.Vehicle;
+import interfaces.Bird;
+import interfaces.Flyable;
 import clases.Shape;
 import clases.Square;
 
@@ -23,5 +25,9 @@ public class Test {
         Shape square = new Square(7);
         square.area();
         square.show();
+
+        System.out.println("=========interfaces========");
+        Flyable bird = new Bird();
+        bird.fly();
     }
 }
