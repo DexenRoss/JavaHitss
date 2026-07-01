@@ -2,18 +2,33 @@
 
 Repositorio de práctica para el **Semillero de Talentos HITSS**, enfocado en reforzar fundamentos de Java mediante ejercicios, mini proyectos y prácticas organizadas por tema.
 
-## Objetivo
+## Descripción
 
 Este repositorio documenta mi avance en Java desde los fundamentos del lenguaje hasta conceptos de programación orientada a objetos y características modernas del ecosistema Java.
 
-A lo largo del repositorio se trabajan temas como variables, operadores, entrada de datos, condicionales, ciclos, arreglos, matrices, encapsulamiento, herencia, composición, validaciones, manejo de excepciones, sobrescritura de métodos, clases `final`, `records` y clases `sealed`.
+El objetivo es construir una base sólida para después aplicar estos conocimientos en proyectos backend con **Spring Boot**.
 
-La meta del camino es consolidar estos fundamentos para después aplicarlos en un proyecto backend con **Spring Boot**.
+## Temas principales
+
+- Fundamentos de Java
+- Variables, operadores y entrada de datos
+- Condicionales y ciclos
+- Arreglos y matrices
+- Encapsulamiento
+- Herencia y composición
+- Abstracción
+- Interfaces
+- Clases `final`
+- `records`
+- `sealed classes`
+- Manejo de excepciones
+- Sobrescritura de métodos
+- Mini proyectos orientados a objetos
 
 ## Tecnologías usadas
 
 - Java
-- Java 14+ para prácticas con `switch` expression
+- Java 14+ para prácticas con `switch expression`
 - Java 17+ para prácticas con `records` y `sealed classes`
 - VS Code
 - Git y GitHub
@@ -37,6 +52,10 @@ JavaHitss/
 ├── herencia/
 │   └── POO con clases padre e hijas, composición, constructores, excepciones,
 │       bonos, @Override y métodos polimórficos como showInformation().
+│
+├── abstraccion/
+│   └── Clases abstractas, métodos abstractos, métodos concretos, polimorfismo
+│       e interfaces.
 │
 ├── app_library/
 │   └── Mini proyecto de biblioteca con Book, Library e ISBN.
@@ -62,12 +81,13 @@ JavaHitss/
 | `arreglos` | Arreglos y matrices | Creación, llenado y recorrido de arreglos; `Arrays.sort`, `Arrays.fill`, `Arrays.binarySearch`, `Arrays.copyOf`, matrices y cálculo de promedios. |
 | `encapsulamiento` | Encapsulamiento | Atributos privados, getters/setters, validaciones de datos, métodos de actualización y alcance de miembros. |
 | `herencia` | Programación orientada a objetos | Clases `Person`, `Employee`, `Teacher`, `Administrative`, `Sales`, herencia, composición, constructores, excepciones, bonos y `@Override`. |
+| `abstraccion` | Abstracción e interfaces | Clases abstractas `Vehicle` y `Shape`, clases concretas `Car`, `Circle`, `Square`, polimorfismo, interfaces `Flyable` y `Printer`, métodos `default`, `static` y `private` en interfaces. |
 | `app_library` | Mini proyecto de biblioteca | Modelo `Book`, clase `Library`, clase `ISBN`, validaciones, búsqueda, eliminación, conteo de autores, ISBN únicos, `equals`, `hashCode` y `toString`. |
 | `clasesSealed/records` | Records | Declaración de `record`, constructor compacto, validaciones, métodos propios, métodos estáticos y comparación con clases normales. |
 | `clasesSealed/sealed` | Sealed classes | Jerarquías controladas con `sealed`, `permits`, `final` y `non-sealed`. |
 | `Spring Boot` | Siguiente etapa | Desarrollo de un proyecto backend aplicando los fundamentos aprendidos durante el semillero. |
 
-## Mini proyectos destacados
+## Mini proyectos y prácticas destacadas
 
 ### `app_library`
 
@@ -93,6 +113,17 @@ Práctica de programación orientada a objetos con una jerarquía de empleados. 
 - Cálculo de bonos.
 - Sobrescritura de métodos con `@Override`.
 - Método `showInformation()` para mostrar información específica según el tipo de empleado.
+
+### `abstraccion`
+
+Práctica enfocada en clases abstractas, polimorfismo e interfaces. Incluye:
+
+- Clase abstracta `Vehicle` con método abstracto `startEngine()` y método concreto `stop()`.
+- Clase `Car` como implementación concreta de `Vehicle`.
+- Clase abstracta `Shape` con método abstracto `area()` y método concreto `show()`.
+- Clases `Circle` y `Square` como implementaciones concretas de `Shape`.
+- Interface `Flyable` implementada por `Bird`.
+- Interface `Printer` con constante, método abstracto, método `default`, método `static` y método `private`.
 
 ### `clasesSealed`
 
@@ -129,6 +160,14 @@ javac test/TestLibrary.java
 java test.TestLibrary
 ```
 
+Ejemplo para abstracción e interfaces:
+
+```bash
+cd abstraccion/src
+javac test/Test.java
+java test.Test
+```
+
 > Nota: algunas carpetas fueron creadas como proyectos Java de VS Code, por lo que pueden incluir carpetas como `bin`, `.vscode` o archivos generados por el entorno.
 
 ## Requisitos sugeridos
@@ -152,12 +191,19 @@ Para la mayoría de ejercicios basta con tener Java instalado. Para las práctic
 - [x] Constructores con validaciones
 - [x] Manejo de excepciones con `IllegalArgumentException`
 - [x] Sobrescritura de métodos con `@Override`
+- [x] Clases abstractas
+- [x] Interfaces
+- [x] Métodos `default`, `static` y `private` en interfaces
 - [x] Clases `final`
 - [x] `equals()`, `hashCode()` y `toString()`
 - [x] Mini proyecto de biblioteca
 - [x] Records
 - [x] Sealed classes
 - [ ] Proyecto final con Spring Boot
+
+## Próxima etapa
+
+Aplicar los fundamentos practicados en este repositorio dentro de un proyecto backend con **Spring Boot**, integrando buenas prácticas de programación orientada a objetos, estructura de capas y manejo de datos.
 
 ## Autor
 
