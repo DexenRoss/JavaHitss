@@ -18,6 +18,8 @@ El objetivo es construir una base sólida para después aplicar estos conocimien
 - Herencia y composición
 - Abstracción
 - Interfaces
+- Polimorfismo
+- Enumeraciones (`enum`)
 - Clases `final`
 - `records`
 - `sealed classes`
@@ -57,6 +59,14 @@ JavaHitss/
 │   └── Clases abstractas, métodos abstractos, métodos concretos, polimorfismo
 │       e interfaces.
 │
+├── polimorfismo/
+│   └── Prácticas de polimorfismo, casting, instanceof con pattern matching,
+│       clases abstractas, records, sealed interfaces y switch sobre tipos.
+│
+├── enumeraciones/
+│   └── Prácticas con enum, atributos, métodos, switch expressions,
+│       métodos abstractos en enum e implementación de interfaces.
+│
 ├── app_library/
 │   └── Mini proyecto de biblioteca con Book, Library e ISBN.
 │       Practica arreglos dinámicos, búsqueda, eliminación, validación,
@@ -82,6 +92,8 @@ JavaHitss/
 | `encapsulamiento` | Encapsulamiento | Atributos privados, getters/setters, validaciones de datos, métodos de actualización y alcance de miembros. |
 | `herencia` | Programación orientada a objetos | Clases `Person`, `Employee`, `Teacher`, `Administrative`, `Sales`, herencia, composición, constructores, excepciones, bonos y `@Override`. |
 | `abstraccion` | Abstracción e interfaces | Clases abstractas `Vehicle` y `Shape`, clases concretas `Car`, `Circle`, `Square`, polimorfismo, interfaces `Flyable` y `Printer`, métodos `default`, `static` y `private` en interfaces. |
+| `polimorfismo` | Polimorfismo y tipos sellados | Clase abstracta `Employee`, clases `Developer` y `Manager`, referencias polimórficas, `instanceof`, casting, `sealed interface Result`, records `Success`, `Error`, `Adverticement` y switch por tipo. |
+| `enumeraciones` | Enumeraciones | `OrderStatus`, `Priority`, `UserRole`, `Season`, `Operation`, `DocumentType`, atributos en enum, métodos, `toString()`, `compareTo()`, switch expressions, métodos abstractos e interfaces. |
 | `app_library` | Mini proyecto de biblioteca | Modelo `Book`, clase `Library`, clase `ISBN`, validaciones, búsqueda, eliminación, conteo de autores, ISBN únicos, `equals`, `hashCode` y `toString`. |
 | `clasesSealed/records` | Records | Declaración de `record`, constructor compacto, validaciones, métodos propios, métodos estáticos y comparación con clases normales. |
 | `clasesSealed/sealed` | Sealed classes | Jerarquías controladas con `sealed`, `permits`, `final` y `non-sealed`. |
@@ -124,6 +136,33 @@ Práctica enfocada en clases abstractas, polimorfismo e interfaces. Incluye:
 - Clases `Circle` y `Square` como implementaciones concretas de `Shape`.
 - Interface `Flyable` implementada por `Bird`.
 - Interface `Printer` con constante, método abstracto, método `default`, método `static` y método `private`.
+
+### `polimorfismo`
+
+Práctica centrada en el uso de referencias polimórficas y modelado de resultados. Incluye:
+
+- Clase abstracta `Employee`.
+- Implementaciones concretas `Developer` y `Manager`.
+- Sobrescritura de métodos `work()` y `calculateSalary()`.
+- Uso de referencias de tipo padre apuntando a objetos hijo.
+- Uso de `instanceof` con pattern matching.
+- Ejemplos de casting entre tipos.
+- Interface sellada `Result`.
+- Records `Success`, `Error` y `Adverticement` como variantes permitidas.
+- Uso de `switch` para responder según el tipo concreto del resultado.
+
+### `enumeraciones`
+
+Práctica enfocada en `enum` y sus posibilidades dentro de Java. Incluye:
+
+- Enum simple con `OrderStatus`.
+- Enum con atributos y constructor privado con `Priority`.
+- Enum con método de validación de rol con `UserRole`.
+- Sobrescritura de `toString()` usando `switch expression`.
+- Enum con método estático usando `Season`.
+- Enum con métodos abstractos usando `Operation`.
+- Enum que implementa una interfaz usando `DocumentType` y `Printable`.
+- Uso de `name()`, `ordinal()`, `compareTo()`, `equals()` y comparación con `==`.
 
 ### `clasesSealed`
 
@@ -168,6 +207,22 @@ javac test/Test.java
 java test.Test
 ```
 
+Ejemplo para polimorfismo:
+
+```bash
+cd polimorfismo/src
+javac test/Test.java
+java test.Test
+```
+
+Ejemplo para enumeraciones:
+
+```bash
+cd enumeraciones/src
+javac test/Test.java
+java test.Test
+```
+
 > Nota: algunas carpetas fueron creadas como proyectos Java de VS Code, por lo que pueden incluir carpetas como `bin`, `.vscode` o archivos generados por el entorno.
 
 ## Requisitos sugeridos
@@ -194,11 +249,15 @@ Para la mayoría de ejercicios basta con tener Java instalado. Para las práctic
 - [x] Clases abstractas
 - [x] Interfaces
 - [x] Métodos `default`, `static` y `private` en interfaces
+- [x] Polimorfismo
+- [x] Pattern matching con `instanceof`
 - [x] Clases `final`
 - [x] `equals()`, `hashCode()` y `toString()`
 - [x] Mini proyecto de biblioteca
 - [x] Records
 - [x] Sealed classes
+- [x] Enumeraciones (`enum`)
+- [x] Enum con atributos, métodos, métodos abstractos e interfaces
 - [ ] Proyecto final con Spring Boot
 
 ## Próxima etapa
