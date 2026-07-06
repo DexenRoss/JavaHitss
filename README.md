@@ -23,7 +23,9 @@ El objetivo es construir una base sólida para después aplicar estos conocimien
 - Clases `final`
 - `records`
 - `sealed classes`
+- Switch moderno con pattern matching
 - Manejo de excepciones
+- Generación de documentación con Javadoc
 - Sobrescritura de métodos
 - Mini proyectos orientados a objetos
 
@@ -32,8 +34,10 @@ El objetivo es construir una base sólida para después aplicar estos conocimien
 - Java
 - Java 14+ para prácticas con `switch expression`
 - Java 17+ para prácticas con `records` y `sealed classes`
+- Java 21+ para prácticas con `switch` moderno y pattern matching
 - VS Code
 - Git y GitHub
+- Javadoc
 
 ## Estructura del repositorio
 
@@ -72,6 +76,11 @@ JavaHitss/
 │       Practica arreglos dinámicos, búsqueda, eliminación, validación,
 │       clases final, equals, hashCode y toString.
 │
+├── sistema_notificaciones/
+│   └── Mini proyecto de sistema de notificaciones empresariales.
+│       Usa records, sealed interface, enum, validaciones, arreglos,
+│       switch moderno con pattern matching y Javadoc.
+│
 └── clasesSealed/
     ├── records/
     │   └── Prácticas con records, constructores compactos, métodos propios
@@ -95,11 +104,26 @@ JavaHitss/
 | `polimorfismo` | Polimorfismo y tipos sellados | Clase abstracta `Employee`, clases `Developer` y `Manager`, referencias polimórficas, `instanceof`, casting, `sealed interface Result`, records `Success`, `Error`, `Adverticement` y switch por tipo. |
 | `enumeraciones` | Enumeraciones | `OrderStatus`, `Priority`, `UserRole`, `Season`, `Operation`, `DocumentType`, atributos en enum, métodos, `toString()`, `compareTo()`, switch expressions, métodos abstractos e interfaces. |
 | `app_library` | Mini proyecto de biblioteca | Modelo `Book`, clase `Library`, clase `ISBN`, validaciones, búsqueda, eliminación, conteo de autores, ISBN únicos, `equals`, `hashCode` y `toString`. |
+| `sistema_notificaciones` | Sistema de notificaciones empresariales | Records `EmailNotification`, `SmsNotification`, `PushNotification`, sealed interface `Notification`, enum `NotificationType`, procesador de notificaciones, validaciones, arreglos, switch moderno y Javadoc. |
 | `clasesSealed/records` | Records | Declaración de `record`, constructor compacto, validaciones, métodos propios, métodos estáticos y comparación con clases normales. |
 | `clasesSealed/sealed` | Sealed classes | Jerarquías controladas con `sealed`, `permits`, `final` y `non-sealed`. |
 | `Spring Boot` | Siguiente etapa | Desarrollo de un proyecto backend aplicando los fundamentos aprendidos durante el semillero. |
 
 ## Mini proyectos y prácticas destacadas
+
+### `sistema_notificaciones`
+
+Mini proyecto en Java para representar y procesar distintos tipos de notificaciones empresariales. Incluye:
+
+- Notificaciones por correo electrónico, SMS y push notification.
+- Interface sellada `Notification`.
+- Records `EmailNotification`, `SmsNotification` y `PushNotification`.
+- Enum `NotificationType` para identificar el tipo de notificación.
+- Clase `NotificationProcessor` para recorrer y procesar un arreglo `Notification[]`.
+- Validaciones con `IllegalArgumentException` en constructores compactos.
+- Uso de `switch` moderno con pattern matching.
+- Separación por paquetes: `classes`, `enums`, `service` y `test`.
+- Generación de documentación con Javadoc.
 
 ### `app_library`
 
@@ -199,6 +223,21 @@ javac test/TestLibrary.java
 java test.TestLibrary
 ```
 
+Ejemplo para el sistema de notificaciones:
+
+```bash
+cd sistema_notificaciones/src
+javac classes/*.java enums/*.java service/*.java test/TestNotifications.java
+java test.TestNotifications
+```
+
+Ejemplo para generar Javadoc del sistema de notificaciones:
+
+```bash
+cd sistema_notificaciones/src
+javadoc -d ../docs -encoding UTF-8 -charset UTF-8 classes/*.java enums/*.java service/*.java test/*.java
+```
+
 Ejemplo para abstracción e interfaces:
 
 ```bash
@@ -231,6 +270,7 @@ Para la mayoría de ejercicios basta con tener Java instalado. Para las práctic
 
 - Java 14 o superior para `switch expression`.
 - Java 17 o superior para `records` y `sealed classes`.
+- Java 21 o superior para `switch` moderno con pattern matching.
 - VS Code con Extension Pack for Java.
 
 ## Avance actual
@@ -254,10 +294,12 @@ Para la mayoría de ejercicios basta con tener Java instalado. Para las práctic
 - [x] Clases `final`
 - [x] `equals()`, `hashCode()` y `toString()`
 - [x] Mini proyecto de biblioteca
+- [x] Sistema de notificaciones empresariales
 - [x] Records
 - [x] Sealed classes
 - [x] Enumeraciones (`enum`)
 - [x] Enum con atributos, métodos, métodos abstractos e interfaces
+- [x] Javadoc
 - [ ] Proyecto final con Spring Boot
 
 ## Próxima etapa
