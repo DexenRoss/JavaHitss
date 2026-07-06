@@ -216,6 +216,6 @@ out/
 
 ## Autor
 
-**DexenRoss**
+**Oscar Emilio Caballero Jimenez** (**DexenRoss**)
 
 Proyecto realizado como práctica de Java para el Semillero de Talentos HITSS.
