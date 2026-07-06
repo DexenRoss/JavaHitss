@@ -1,0 +1,33 @@
+# Compilados de Java
+*.class
+bin/
+out/
+target/
+build/
+
+# Javadoc generado
+docs/
+doc/
+javadoc/
+
+# Archivos temporales
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# VS Code / configuración local
+.vscode/
+.settings/
+.project
+.classpath
+
+# IntelliJ / Eclipse, por si llegas a abrirlo ahi
+.idea/
+*.iml
+
+# Archivos comprimidos o entregables generados
+*.zip
+*.rar
+*.7z
