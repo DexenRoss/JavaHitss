@@ -6,4 +6,13 @@ public enum UserRole {
     public boolean isAdmin(){
         return this == ADMIN;
     }
+
+    @Override
+    public String toString() {
+       return switch (this) {
+            case ADMIN -> "Admin";
+            case EMPLOYEE-> "Employee";
+            case CLIENT->"Client";
+        };
+    }
 }
