@@ -1,18 +1,50 @@
-## Getting Started
+# Encapsulamiento
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Proyecto de práctica enfocado en uno de los pilares de la programación orientada a objetos: el **encapsulamiento**.
 
-## Folder Structure
+Aquí se trabajan clases con atributos privados, acceso controlado mediante métodos, validaciones y alcance de variables y métodos.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Practicar cómo proteger el estado interno de los objetos y exponer únicamente las operaciones necesarias mediante métodos públicos.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Atributos privados
+- Getters y setters
+- Validaciones dentro de métodos
+- Constructores
+- Alcance de variables
+- Alcance de métodos
+- Actualización controlada del estado de un objeto
+- Separación de responsabilidades dentro de una clase
 
-## Dependency Management
+## Estructura general
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+encapsulamineto/
+├── README.md
+└── src/
+    └── ...
+```
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd encapsulamineto/src
+```
+
+Después compila y ejecuta la clase que contenga el método `main`:
+
+```bash
+javac paquete/Clase.java
+java paquete.Clase
+```
+
+> Nota: el nombre de la carpeta se conserva como `encapsulamineto` porque así existe actualmente en el repositorio.
+
+## Qué se aprende
+
+Este módulo ayuda a entender por qué no conviene dejar los atributos abiertos al acceso directo y cómo los métodos permiten controlar, validar y mantener consistente la información de los objetos.
