@@ -52,7 +52,7 @@ JavaHitss/
 ├── arreglos/
 │   └── Arreglos, matrices, búsquedas, ordenamiento y métodos de la clase Arrays.
 │
-├── encapsulamiento/
+├── encapsulamineto/
 │   └── Atributos privados, getters, setters, validaciones y alcance de variables/métodos.
 │
 ├── herencia/
@@ -91,6 +91,8 @@ JavaHitss/
             de vehículos.
 ```
 
+> Nota: la carpeta `encapsulamineto` conserva el nombre que tiene actualmente en el repositorio.
+
 ## Proyectos y temas trabajados
 
 | Carpeta | Tema principal | Qué se practica |
@@ -98,7 +100,7 @@ JavaHitss/
 | `variables` | Fundamentos de Java | Variables primitivas, operadores matemáticos/lógicos, `instanceof` y entrada con `Scanner`. |
 | `controlFlujo` | Flujo de control | `if`, `switch`, `switch expression`, `yield`, ciclos `for`, `while`, ciclos anidados y números aleatorios. |
 | `arreglos` | Arreglos y matrices | Creación, llenado y recorrido de arreglos; `Arrays.sort`, `Arrays.fill`, `Arrays.binarySearch`, `Arrays.copyOf`, matrices y cálculo de promedios. |
-| `encapsulamiento` | Encapsulamiento | Atributos privados, getters/setters, validaciones de datos, métodos de actualización y alcance de miembros. |
+| `encapsulamineto` | Encapsulamiento | Atributos privados, getters/setters, validaciones de datos, métodos de actualización y alcance de miembros. |
 | `herencia` | Programación orientada a objetos | Clases `Person`, `Employee`, `Teacher`, `Administrative`, `Sales`, herencia, composición, constructores, excepciones, bonos y `@Override`. |
 | `abstraccion` | Abstracción e interfaces | Clases abstractas `Vehicle` y `Shape`, clases concretas `Car`, `Circle`, `Square`, polimorfismo, interfaces `Flyable` y `Printer`, métodos `default`, `static` y `private` en interfaces. |
 | `polimorfismo` | Polimorfismo y tipos sellados | Clase abstracta `Employee`, clases `Developer` y `Manager`, referencias polimórficas, `instanceof`, casting, `sealed interface Result`, records `Success`, `Error`, `Adverticement` y switch por tipo. |
@@ -108,6 +110,22 @@ JavaHitss/
 | `clasesSealed/records` | Records | Declaración de `record`, constructor compacto, validaciones, métodos propios, métodos estáticos y comparación con clases normales. |
 | `clasesSealed/sealed` | Sealed classes | Jerarquías controladas con `sealed`, `permits`, `final` y `non-sealed`. |
 | `Spring Boot` | Siguiente etapa | Desarrollo de un proyecto backend aplicando los fundamentos aprendidos durante el semillero. |
+
+## Documentación por módulo
+
+Además del README principal, varios proyectos tienen su propio README con objetivo, estructura, conceptos practicados y comandos de ejecución:
+
+- `encapsulamineto/README.md`
+- `herencia/README.md`
+- `abstraccion/README.md`
+- `polimorfismo/README.md`
+- `enumeraciones/README.md`
+- `app_library/README.md`
+- `clasesSealed/README.md`
+- `clasesSealed/records/README.md`
+- `sistema_notificaciones/README.md`
+
+Los README que ya tenían contenido propio se conservaron y no se reemplazaron.
 
 ## Mini proyectos y prácticas destacadas
 
