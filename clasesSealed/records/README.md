@@ -1,18 +1,60 @@
-## Getting Started
+# Records
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Proyecto de práctica enfocado en el uso de **records** en Java.
 
-## Folder Structure
+Los `record` permiten modelar objetos de datos de forma compacta, generando automáticamente constructor, getters de estilo record, `equals()`, `hashCode()` y `toString()`.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Practicar cómo declarar records, cómo validar datos con constructores compactos y cómo agregar métodos propios o métodos estáticos cuando el modelo lo necesita.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Declaración de `record`
+- Constructor compacto
+- Validaciones con `IllegalArgumentException`
+- Métodos propios dentro de un record
+- Métodos estáticos
+- Comparación con clases tradicionales
+- Uso de `equals()` generado automáticamente
+- Uso de `toString()` generado automáticamente
+- Inmutabilidad de datos
 
-## Dependency Management
+## Estructura del proyecto
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+clasesSealed/records/
+└── src/
+    ├── clases/
+    │   └── Person.java
+    │
+    ├── records/
+    │   ├── Employee.java
+    │   ├── Person.java
+    │   └── Rectangle.java
+    │
+    └── test/
+        └── Test.java
+```
+
+## Records principales
+
+| Record | Qué practica |
+|---|---|
+| `records.Person` | Declaración de un record con validaciones. |
+| `Rectangle` | Métodos propios, cálculo de área y método estático `square()`. |
+| `Employee` | Comparación entre una clase tradicional y un modelo tipo record. |
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd clasesSealed/records/src
+javac test/Test.java
+java test.Test
+```
+
+## Qué se aprende
+
+Este módulo muestra cómo los `record` reducen código repetitivo cuando se quiere representar información simple, pero manteniendo la posibilidad de agregar validaciones y lógica propia.
