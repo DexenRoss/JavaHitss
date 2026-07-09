@@ -1,18 +1,68 @@
-## Getting Started
+# Polimorfismo
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Proyecto de práctica enfocado en **polimorfismo**, casting, pattern matching con `instanceof`, records e interfaces selladas.
 
-## Folder Structure
+Este módulo muestra cómo una referencia de tipo general puede apuntar a objetos de clases concretas diferentes y ejecutar el comportamiento correspondiente.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Practicar el uso de referencias polimórficas y modelar distintos resultados posibles usando una `sealed interface` junto con `record` y `switch` moderno.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Polimorfismo
+- Clases abstractas
+- Sobrescritura de métodos
+- Referencias de tipo padre apuntando a objetos hijo
+- Casting
+- `instanceof`
+- Pattern matching con `instanceof`
+- `sealed interface`
+- `record`
+- Switch moderno con pattern matching
 
-## Dependency Management
+## Estructura del proyecto
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+polimorfismo/
+└── src/
+    ├── classes/
+    │   ├── Employee.java
+    │   ├── Developer.java
+    │   └── Manager.java
+    │
+    ├── interfaces/
+    │   ├── Result.java
+    │   ├── Success.java
+    │   ├── Error.java
+    │   └── Adverticement.java
+    │
+    └── test/
+        └── Test.java
+```
+
+## Clases e interfaces principales
+
+| Elemento | Responsabilidad |
+|---|---|
+| `Employee` | Clase abstracta que define el contrato de trabajo y salario. |
+| `Developer` | Implementación concreta de un empleado desarrollador. |
+| `Manager` | Implementación concreta de un empleado gerente. |
+| `Result` | Interface sellada para modelar resultados posibles. |
+| `Success` | Record que representa una operación exitosa. |
+| `Error` | Record que representa un error. |
+| `Adverticement` | Record que representa un aviso o advertencia. |
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd polimorfismo/src
+javac test/Test.java
+java test.Test
+```
+
+## Qué se aprende
+
+Este módulo ayuda a entender cómo Java decide qué método ejecutar según el objeto real en memoria y cómo las características modernas del lenguaje permiten modelar casos cerrados de forma más segura.
