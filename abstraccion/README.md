@@ -1,18 +1,57 @@
-## Getting Started
+# Abstracción
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Proyecto de práctica enfocado en **clases abstractas**, métodos abstractos, métodos concretos e interfaces en Java.
 
-## Folder Structure
+Este módulo trabaja ejemplos con vehículos, figuras geométricas e interfaces para separar contratos de implementación.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Comprender cómo usar clases abstractas e interfaces para definir comportamientos generales y permitir que cada clase concreta implemente su propia versión.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Clases abstractas
+- Métodos abstractos
+- Métodos concretos dentro de clases abstractas
+- Polimorfismo
+- Interfaces
+- Implementación de interfaces con `implements`
+- Métodos `default` en interfaces
+- Métodos `static` en interfaces
+- Métodos `private` en interfaces
+- Sobrescritura con `@Override`
 
-## Dependency Management
+## Clases e interfaces principales
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+abstraccion/
+└── src/
+    ├── clases/
+    │   ├── Vehicle.java
+    │   ├── Car.java
+    │   ├── Shape.java
+    │   ├── Circle.java
+    │   └── Square.java
+    │
+    ├── interfaces/
+    │   ├── Flyable.java
+    │   ├── Bird.java
+    │   └── Printer.java
+    │
+    └── test/
+        └── Test.java
+```
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd abstraccion/src
+javac test/Test.java
+java test.Test
+```
+
+## Qué se aprende
+
+Este módulo ayuda a entender cuándo conviene usar una clase abstracta y cuándo una interfaz. También muestra cómo Java permite combinar métodos obligatorios, métodos ya implementados y comportamiento polimórfico.

@@ -1,18 +1,53 @@
-## Getting Started
+# Herencia
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Proyecto de práctica enfocado en **herencia**, composición y sobrescritura de métodos en Java.
 
-## Folder Structure
+El módulo modela una jerarquía de personas y empleados para practicar cómo una clase padre puede compartir atributos y comportamientos con clases hijas.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Entender cómo reutilizar código mediante herencia, cómo especializar clases hijas y cómo sobrescribir métodos para adaptar el comportamiento de cada tipo de objeto.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Clases padre e hijas
+- Herencia con `extends`
+- Composición
+- Constructores
+- Validaciones con excepciones
+- Sobrescritura de métodos con `@Override`
+- Cálculo de bonos
+- Métodos polimórficos como `showInformation()`
+- Uso de paquetes para organizar el código
 
-## Dependency Management
+## Clases principales
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+herencia/
+└── src/
+    ├── padre/
+    │   ├── Person.java
+    │   └── Employee.java
+    │
+    ├── hijas/
+    │   ├── Administrative.java
+    │   ├── Sales.java
+    │   └── Teacher.java
+    │
+    └── test/
+        └── Test.java
+```
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd herencia/src
+javac test/Test.java
+java test.Test
+```
+
+## Qué se aprende
+
+Este módulo muestra cómo construir jerarquías de clases, reutilizar atributos y métodos comunes, y especializar comportamientos según el tipo de empleado.

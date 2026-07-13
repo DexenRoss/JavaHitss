@@ -1,18 +1,71 @@
-## Getting Started
+# Enumeraciones
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Proyecto de práctica enfocado en el uso de **enumeraciones (`enum`)** en Java.
 
-## Folder Structure
+Este módulo muestra que un `enum` no solo sirve para declarar constantes, sino que también puede tener atributos, constructores, métodos, sobrescritura de métodos e incluso implementar interfaces.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Entender cómo usar `enum` para representar conjuntos cerrados de valores de forma segura y expresiva.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Declaración de `enum`
+- Constantes enumeradas
+- Atributos dentro de un enum
+- Constructor privado en enum
+- Métodos personalizados
+- Métodos estáticos
+- Métodos abstractos en enum
+- Sobrescritura de `toString()`
+- Implementación de interfaces
+- Uso de `name()`
+- Uso de `ordinal()`
+- Uso de `compareTo()`
+- Comparación con `equals()` y `==`
+- `switch expression` con enum
 
-## Dependency Management
+## Estructura del proyecto
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+enumeraciones/
+└── src/
+    ├── enums/
+    │   ├── DocumentType.java
+    │   ├── Operation.java
+    │   ├── OrderStatus.java
+    │   ├── Priority.java
+    │   ├── Season.java
+    │   └── UserRole.java
+    │
+    ├── interfaces/
+    │   └── Printable.java
+    │
+    └── test/
+        └── Test.java
+```
+
+## Enumeraciones principales
+
+| Enum | Qué representa |
+|---|---|
+| `OrderStatus` | Estados básicos de una orden. |
+| `Priority` | Prioridades con descripción interna. |
+| `UserRole` | Roles de usuario con método de validación. |
+| `Season` | Estaciones del año con método estático. |
+| `Operation` | Operaciones con métodos abstractos por constante. |
+| `DocumentType` | Tipos de documento que implementan `Printable`. |
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd enumeraciones/src
+javac test/Test.java
+java test.Test
+```
+
+## Qué se aprende
+
+Este módulo ayuda a ver los `enum` como tipos completos de Java, útiles para representar estados, roles, operaciones y comportamientos controlados sin depender de cadenas o números sueltos.
