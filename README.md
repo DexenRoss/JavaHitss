@@ -16,17 +16,19 @@ El objetivo es construir una base sólida para después aplicar estos conocimien
 - Arreglos y matrices
 - Encapsulamiento
 - Herencia y composición
-- Abstracción
-- Interfaces
+- Abstracción e interfaces
 - Polimorfismo
 - Enumeraciones (`enum`)
+- Excepciones checked y unchecked
+- Lectura y escritura de archivos
+- Genéricos
+- `Optional`
+- Repositorios y servicios con tipos genéricos
 - Clases `final`
 - `records`
 - `sealed classes`
 - Switch moderno con pattern matching
-- Manejo de excepciones
 - Generación de documentación con Javadoc
-- Sobrescritura de métodos
 - Mini proyectos orientados a objetos
 
 ## Tecnologías usadas
@@ -71,6 +73,21 @@ JavaHitss/
 │   └── Prácticas con enum, atributos, métodos, switch expressions,
 │       métodos abstractos en enum e implementación de interfaces.
 │
+├── excepciones/
+│   └── Prácticas con excepciones checked, unchecked, throw, throws y manejo con try-catch.
+│
+├── archivos/
+│   └── Prácticas de lectura y escritura de archivos con FileWriter,
+│       BufferedWriter, Scanner, BufferedReader, Files y Path.
+│
+├── genericos/
+│   └── Prácticas con clases, métodos e interfaces genéricas, Pair,
+│       Response, Repository, Optional y records genéricos.
+│
+├── gestionEmpleados/
+│   └── Mini proyecto de gestión de empleados usando Repository<T, ID>,
+│       servicios, records y Optional.
+│
 ├── app_library/
 │   └── Mini proyecto de biblioteca con Book, Library e ISBN.
 │       Practica arreglos dinámicos, búsqueda, eliminación, validación,
@@ -101,15 +118,19 @@ JavaHitss/
 | `controlFlujo` | Flujo de control | `if`, `switch`, `switch expression`, `yield`, ciclos `for`, `while`, ciclos anidados y números aleatorios. |
 | `arreglos` | Arreglos y matrices | Creación, llenado y recorrido de arreglos; `Arrays.sort`, `Arrays.fill`, `Arrays.binarySearch`, `Arrays.copyOf`, matrices y cálculo de promedios. |
 | `encapsulamineto` | Encapsulamiento | Atributos privados, getters/setters, validaciones de datos, métodos de actualización y alcance de miembros. |
-| `herencia` | Programación orientada a objetos | Clases `Person`, `Employee`, `Teacher`, `Administrative`, `Sales`, herencia, composición, constructores, excepciones, bonos y `@Override`. |
-| `abstraccion` | Abstracción e interfaces | Clases abstractas `Vehicle` y `Shape`, clases concretas `Car`, `Circle`, `Square`, polimorfismo, interfaces `Flyable` y `Printer`, métodos `default`, `static` y `private` en interfaces. |
-| `polimorfismo` | Polimorfismo y tipos sellados | Clase abstracta `Employee`, clases `Developer` y `Manager`, referencias polimórficas, `instanceof`, casting, `sealed interface Result`, records `Success`, `Error`, `Adverticement` y switch por tipo. |
-| `enumeraciones` | Enumeraciones | `OrderStatus`, `Priority`, `UserRole`, `Season`, `Operation`, `DocumentType`, atributos en enum, métodos, `toString()`, `compareTo()`, switch expressions, métodos abstractos e interfaces. |
-| `app_library` | Mini proyecto de biblioteca | Modelo `Book`, clase `Library`, clase `ISBN`, validaciones, búsqueda, eliminación, conteo de autores, ISBN únicos, `equals`, `hashCode` y `toString`. |
-| `sistema_notificaciones` | Sistema de notificaciones empresariales | Records `EmailNotification`, `SmsNotification`, `PushNotification`, sealed interface `Notification`, enum `NotificationType`, procesador de notificaciones, validaciones, arreglos, switch moderno y Javadoc. |
+| `herencia` | POO con herencia | Clases `Person`, `Employee`, `Teacher`, `Administrative`, `Sales`, composición, constructores, excepciones, bonos y `@Override`. |
+| `abstraccion` | Abstracción e interfaces | Clases abstractas `Vehicle` y `Shape`, clases concretas, interfaces `Flyable` y `Printer`, métodos `default`, `static` y `private`. |
+| `polimorfismo` | Polimorfismo y tipos sellados | `Employee`, `Developer`, `Manager`, `instanceof`, casting, `sealed interface Result`, records y switch por tipo. |
+| `enumeraciones` | Enumeraciones | `OrderStatus`, `Priority`, `UserRole`, `Season`, `Operation`, `DocumentType`, switch expressions, métodos abstractos e interfaces. |
+| `excepciones` | Manejo de errores | Excepciones checked y unchecked, `InsufficientStockException`, `InvalidOrderException`, `throw`, `throws` y `try-catch`. |
+| `archivos` | Manejo de archivos | Escritura con `FileWriter`/`BufferedWriter` y lectura con `Scanner`, `BufferedReader`, `Files.readString`, `Files.lines` y `Files.readAllLines`. |
+| `genericos` | Genéricos y Optional | `Box<T>`, `Pair<K,V>`, `Response<T,E>`, métodos genéricos, `Repository<T>`, records genéricos y `Optional`. |
+| `gestionEmpleados` | Mini proyecto con Repository y Service | `Employee`, `Repository<T, ID>`, `EmployeeRepositoryImpl`, `EmployeeService`, `Optional`, `map`, `orElse` e `ifPresent`. |
+| `app_library` | Mini proyecto de biblioteca | `Book`, `Library`, `ISBN`, validaciones, búsqueda, eliminación, autores únicos, ISBN únicos, `equals`, `hashCode` y `toString`. |
+| `sistema_notificaciones` | Sistema de notificaciones empresariales | Records de notificación, sealed interface `Notification`, enum `NotificationType`, procesador, validaciones, switch moderno y Javadoc. |
 | `clasesSealed/records` | Records | Declaración de `record`, constructor compacto, validaciones, métodos propios, métodos estáticos y comparación con clases normales. |
 | `clasesSealed/sealed` | Sealed classes | Jerarquías controladas con `sealed`, `permits`, `final` y `non-sealed`. |
-| `Spring Boot` | Siguiente etapa | Desarrollo de un proyecto backend aplicando los fundamentos aprendidos durante el semillero. |
+| `Spring Boot` | Siguiente etapa | Desarrollo backend aplicando los fundamentos aprendidos durante el semillero. |
 
 ## Documentación por módulo
 
@@ -120,101 +141,87 @@ Además del README principal, varios proyectos tienen su propio README con objet
 - `abstraccion/README.md`
 - `polimorfismo/README.md`
 - `enumeraciones/README.md`
+- `excepciones/README.md`
+- `archivos/README.md`
+- `genericos/README.md`
+- `gestionEmpleados/README.md`
 - `app_library/README.md`
 - `clasesSealed/README.md`
 - `clasesSealed/records/README.md`
 - `sistema_notificaciones/README.md`
 
-Los README que ya tenían contenido propio se conservaron y no se reemplazaron.
-
 ## Mini proyectos y prácticas destacadas
+
+### `gestionEmpleados`
+
+Mini proyecto para practicar una estructura tipo repositorio/servicio usando genéricos y `Optional`.
+
+- `Employee` como `record`.
+- Interface `Repository<T, ID>`.
+- Implementación `EmployeeRepositoryImpl`.
+- Interface `EmployeeService`.
+- Implementación `EmployeeServiceImpl`.
+- Búsqueda por identificador.
+- Uso de `Optional.empty()`, `Optional.of()`, `map()`, `ifPresent()` y `orElse()`.
 
 ### `sistema_notificaciones`
 
-Mini proyecto en Java para representar y procesar distintos tipos de notificaciones empresariales. Incluye:
+Mini proyecto en Java para representar y procesar distintos tipos de notificaciones empresariales.
 
 - Notificaciones por correo electrónico, SMS y push notification.
 - Interface sellada `Notification`.
 - Records `EmailNotification`, `SmsNotification` y `PushNotification`.
-- Enum `NotificationType` para identificar el tipo de notificación.
-- Clase `NotificationProcessor` para recorrer y procesar un arreglo `Notification[]`.
-- Validaciones con `IllegalArgumentException` en constructores compactos.
-- Uso de `switch` moderno con pattern matching.
-- Separación por paquetes: `classes`, `enums`, `service` y `test`.
+- Enum `NotificationType`.
+- Clase `NotificationProcessor`.
+- Validaciones con `IllegalArgumentException`.
+- `switch` moderno con pattern matching.
 - Generación de documentación con Javadoc.
 
 ### `app_library`
 
-Mini proyecto orientado a objetos que simula una biblioteca. Incluye:
+Mini proyecto orientado a objetos que simula una biblioteca.
 
 - Registro de libros con `Book`.
 - Identificador `ISBN` como clase `final` con validación.
-- Administración de libros mediante la clase `Library`.
-- Búsqueda por ISBN.
-- Eliminación de libros.
-- Conteo de autores únicos.
-- Obtención de ISBN únicos.
-- Uso de `Arrays.copyOf()` para manejar arreglos dinámicos.
+- Administración de libros mediante `Library`.
+- Búsqueda, eliminación, autores únicos e ISBN únicos.
+- Uso de `Arrays.copyOf()`.
 - Sobrescritura de `equals()`, `hashCode()` y `toString()`.
 
-### `herencia`
+### `archivos`
 
-Práctica de programación orientada a objetos con una jerarquía de empleados. Incluye:
+Práctica de manejo de archivos.
 
-- Clase padre `Employee`.
-- Clases hijas como `Administrative` y `Sales`.
-- Constructores con validaciones.
-- Cálculo de bonos.
-- Sobrescritura de métodos con `@Override`.
-- Método `showInformation()` para mostrar información específica según el tipo de empleado.
+- Escritura con `FileWriter` y `BufferedWriter`.
+- Lectura con `Scanner`.
+- Lectura con `BufferedReader`.
+- Lectura con `Files.readString()`.
+- Lectura con `Files.lines()`.
+- Lectura con `Files.readAllLines()`.
+- Manejo de `IOException` y `FileNotFoundException`.
+- Uso de try-with-resources.
 
-### `abstraccion`
+### `genericos`
 
-Práctica enfocada en clases abstractas, polimorfismo e interfaces. Incluye:
+Práctica de genéricos en Java.
 
-- Clase abstracta `Vehicle` con método abstracto `startEngine()` y método concreto `stop()`.
-- Clase `Car` como implementación concreta de `Vehicle`.
-- Clase abstracta `Shape` con método abstracto `area()` y método concreto `show()`.
-- Clases `Circle` y `Square` como implementaciones concretas de `Shape`.
-- Interface `Flyable` implementada por `Bird`.
-- Interface `Printer` con constante, método abstracto, método `default`, método `static` y método `private`.
+- Clases genéricas `Box<T>`, `Pair<K,V>` y `Response<T,E>`.
+- Métodos genéricos.
+- Constructores genéricos.
+- Interfaces genéricas con `Repository<T>`.
+- Implementaciones con tipos concretos.
+- Records genéricos como `Result<T>`.
+- Uso de `Optional` para evitar valores nulos.
 
-### `polimorfismo`
+### `excepciones`
 
-Práctica centrada en el uso de referencias polimórficas y modelado de resultados. Incluye:
+Práctica de manejo de excepciones.
 
-- Clase abstracta `Employee`.
-- Implementaciones concretas `Developer` y `Manager`.
-- Sobrescritura de métodos `work()` y `calculateSalary()`.
-- Uso de referencias de tipo padre apuntando a objetos hijo.
-- Uso de `instanceof` con pattern matching.
-- Ejemplos de casting entre tipos.
-- Interface sellada `Result`.
-- Records `Success`, `Error` y `Adverticement` como variantes permitidas.
-- Uso de `switch` para responder según el tipo concreto del resultado.
-
-### `enumeraciones`
-
-Práctica enfocada en `enum` y sus posibilidades dentro de Java. Incluye:
-
-- Enum simple con `OrderStatus`.
-- Enum con atributos y constructor privado con `Priority`.
-- Enum con método de validación de rol con `UserRole`.
-- Sobrescritura de `toString()` usando `switch expression`.
-- Enum con método estático usando `Season`.
-- Enum con métodos abstractos usando `Operation`.
-- Enum que implementa una interfaz usando `DocumentType` y `Printable`.
-- Uso de `name()`, `ordinal()`, `compareTo()`, `equals()` y comparación con `==`.
-
-### `clasesSealed`
-
-Prácticas con características modernas de Java:
-
-- `records` para representar datos de forma compacta.
-- Constructores compactos con validaciones.
-- Métodos propios dentro de un `record`.
-- Clases `sealed`, `final` y `non-sealed`.
-- Jerarquía de vehículos controlada con `permits`.
+- Excepción checked `InsufficientStockException`.
+- Excepción unchecked `InvalidOrderException`.
+- Uso de `throw` y `throws`.
+- Captura con `try-catch`.
+- Validaciones de orden y stock.
 
 ## Cómo ejecutar los ejercicios
 
@@ -225,20 +232,44 @@ Cada carpeta funciona como un proyecto o conjunto de ejercicios independiente. P
 3. Busca una clase con método `main`, normalmente dentro de `src`.
 4. Ejecuta el archivo desde VS Code o desde terminal.
 
-Ejemplo general:
+Ejemplo para gestión de empleados:
 
 ```bash
-cd herencia/src
+cd gestionEmpleados/src
+javac test/TestEmployee.java
+java test.TestEmployee
+```
+
+Ejemplo para genéricos:
+
+```bash
+cd genericos/src
 javac test/Test.java
 java test.Test
 ```
 
-Ejemplo para el mini proyecto de biblioteca:
+Ejemplo para Optional:
 
 ```bash
-cd app_library/src
-javac test/TestLibrary.java
-java test.TestLibrary
+cd genericos/src
+javac optionals/TestOptional.java
+java optionals.TestOptional
+```
+
+Ejemplo para excepciones:
+
+```bash
+cd excepciones/src
+javac test/TestExceptionNew.java
+java test.TestExceptionNew
+```
+
+Ejemplo para archivos:
+
+```bash
+cd archivos
+javac src/test/FileRead.java
+java -cp src test.FileRead
 ```
 
 Ejemplo para el sistema de notificaciones:
@@ -247,37 +278,6 @@ Ejemplo para el sistema de notificaciones:
 cd sistema_notificaciones/src
 javac classes/*.java enums/*.java service/*.java test/TestNotifications.java
 java test.TestNotifications
-```
-
-Ejemplo para generar Javadoc del sistema de notificaciones:
-
-```bash
-cd sistema_notificaciones/src
-javadoc -d ../docs -encoding UTF-8 -charset UTF-8 classes/*.java enums/*.java service/*.java test/*.java
-```
-
-Ejemplo para abstracción e interfaces:
-
-```bash
-cd abstraccion/src
-javac test/Test.java
-java test.Test
-```
-
-Ejemplo para polimorfismo:
-
-```bash
-cd polimorfismo/src
-javac test/Test.java
-java test.Test
-```
-
-Ejemplo para enumeraciones:
-
-```bash
-cd enumeraciones/src
-javac test/Test.java
-java test.Test
 ```
 
 > Nota: algunas carpetas fueron creadas como proyectos Java de VS Code, por lo que pueden incluir carpetas como `bin`, `.vscode` o archivos generados por el entorno.
@@ -298,25 +298,20 @@ Para la mayoría de ejercicios basta con tener Java instalado. Para las práctic
 - [x] Condicionales y ciclos
 - [x] Switch tradicional y switch expression
 - [x] Arreglos y matrices
-- [x] Métodos de la clase `Arrays`
 - [x] Encapsulamiento
 - [x] Herencia y composición
-- [x] Constructores con validaciones
-- [x] Manejo de excepciones con `IllegalArgumentException`
-- [x] Sobrescritura de métodos con `@Override`
-- [x] Clases abstractas
-- [x] Interfaces
-- [x] Métodos `default`, `static` y `private` en interfaces
+- [x] Abstracción e interfaces
 - [x] Polimorfismo
-- [x] Pattern matching con `instanceof`
-- [x] Clases `final`
-- [x] `equals()`, `hashCode()` y `toString()`
-- [x] Mini proyecto de biblioteca
-- [x] Sistema de notificaciones empresariales
+- [x] Enumeraciones (`enum`)
+- [x] Excepciones checked y unchecked
+- [x] Manejo de archivos
+- [x] Genéricos
+- [x] Optional
 - [x] Records
 - [x] Sealed classes
-- [x] Enumeraciones (`enum`)
-- [x] Enum con atributos, métodos, métodos abstractos e interfaces
+- [x] Mini proyecto de biblioteca
+- [x] Sistema de notificaciones empresariales
+- [x] Gestión de empleados con Repository y Service
 - [x] Javadoc
 - [ ] Proyecto final con Spring Boot
 
