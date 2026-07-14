@@ -1,18 +1,57 @@
-## Getting Started
+# Excepciones
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Proyecto de práctica enfocado en el **manejo de excepciones** en Java.
 
-## Folder Structure
+Este módulo muestra cómo crear excepciones personalizadas, cómo lanzarlas y cómo capturarlas para controlar errores de forma clara.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Entender la diferencia entre excepciones checked y unchecked, además de practicar `throw`, `throws` y bloques `try-catch`.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Excepciones checked
+- Excepciones unchecked
+- `Exception`
+- `RuntimeException`
+- Excepciones personalizadas
+- `throw`
+- `throws`
+- Bloques `try-catch`
+- Validaciones de datos
+- Flujo del programa después de una excepción
 
-## Dependency Management
+## Estructura del proyecto
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+excepciones/
+└── src/
+    ├── excepciones/
+    │   └── InsufficientStockException.java
+    │
+    └── test/
+        ├── InvalidOrderException.java
+        └── TestExceptionNew.java
+```
+
+## Clases principales
+
+| Clase | Qué practica |
+|---|---|
+| `InsufficientStockException` | Excepción checked para representar falta de stock. |
+| `InvalidOrderException` | Excepción unchecked para representar una orden inválida. |
+| `TestExceptionNew` | Prueba de validaciones, lanzamiento y captura de excepciones. |
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd excepciones/src
+javac test/TestExceptionNew.java
+java test.TestExceptionNew
+```
+
+## Qué se aprende
+
+Este módulo ayuda a entender cómo Java separa los errores que deben declararse obligatoriamente de los errores de ejecución, y cómo usar excepciones personalizadas para que el código comunique mejor los problemas del dominio.
