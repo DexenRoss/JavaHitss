@@ -1,18 +1,71 @@
-## Getting Started
+# Gestión de Empleados
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Mini proyecto en Java para practicar una estructura sencilla tipo **Repository + Service** usando genéricos y `Optional`.
 
-## Folder Structure
+El proyecto simula la búsqueda de empleados en un arreglo y muestra cómo manejar resultados presentes o ausentes sin depender directamente de `null`.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Practicar una separación básica de responsabilidades entre modelo, repositorio, servicio y clase de prueba.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- `record`
+- Genéricos
+- Interface genérica `Repository<T, ID>`
+- Implementación concreta de repositorio
+- Capa de servicio
+- Inyección de dependencia por constructor
+- `Optional`
+- `Optional.empty()`
+- `Optional.of()`
+- `map()`
+- `ifPresent()`
+- `orElse()`
+- Arreglos de objetos
 
-## Dependency Management
+## Estructura del proyecto
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+gestionEmpleados/
+└── src/
+    ├── models/
+    │   └── Employee.java
+    │
+    ├── repositories/
+    │   ├── Repository.java
+    │   └── impl/
+    │       ├── EmployeeRepositoryImpl.java
+    │       └── EmployeeServiceImpl.java
+    │
+    ├── services/
+    │   └── EmployeeService.java
+    │
+    └── test/
+        └── TestEmployee.java
+```
+
+## Componentes principales
+
+| Elemento | Responsabilidad |
+|---|---|
+| `Employee` | Modelo de empleado usando `record`. |
+| `Repository<T, ID>` | Contrato genérico para buscar por identificador. |
+| `EmployeeRepositoryImpl` | Repositorio con arreglo interno de empleados. |
+| `EmployeeService` | Contrato de servicio para buscar empleados y nombres. |
+| `EmployeeServiceImpl` | Implementación que usa el repositorio y transforma resultados con `Optional`. |
+| `TestEmployee` | Clase de prueba del flujo principal. |
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd gestionEmpleados/src
+javac test/TestEmployee.java
+java test.TestEmployee
+```
+
+## Qué se aprende
+
+Este proyecto conecta genéricos, records y `Optional` en una estructura más cercana a una aplicación real, donde el repositorio se encarga de obtener datos y el servicio de exponer operaciones de negocio.
