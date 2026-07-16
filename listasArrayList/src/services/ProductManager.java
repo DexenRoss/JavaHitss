@@ -52,5 +52,13 @@ public class ProductManager {
         products.forEach(p -> System.out.println(p));
     }
 
+    public int sizeProduct(){
+        return products.size();
+    }
+
+    public List<Product> allProducts(){
+        return products;
+    }
+
     
 }
