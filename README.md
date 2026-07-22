@@ -4,7 +4,7 @@ Repositorio de práctica para el **Semillero de Talentos HITSS**, enfocado en re
 
 ## Descripción
 
-Este repositorio documenta mi avance en Java desde los fundamentos del lenguaje hasta conceptos de programación orientada a objetos y características modernas del ecosistema Java.
+Este repositorio documenta mi avance en Java desde los fundamentos del lenguaje hasta conceptos de programación orientada a objetos, colecciones, manejo de archivos y características modernas del ecosistema Java.
 
 El objetivo es construir una base sólida para después aplicar estos conocimientos en proyectos backend con **Spring Boot**.
 
@@ -24,6 +24,9 @@ El objetivo es construir una base sólida para después aplicar estos conocimien
 - Genéricos
 - `Optional`
 - Repositorios y servicios con tipos genéricos
+- Colecciones con `List`, `ArrayList`, `LinkedList` y `Set`
+- Iteradores y `ListIterator`
+- Ordenamiento con `Comparable`, `Comparator`, `Collections.sort()` y `List.sort()`
 - Clases `final`
 - `records`
 - `sealed classes`
@@ -88,6 +91,17 @@ JavaHitss/
 │   └── Mini proyecto de gestión de empleados usando Repository<T, ID>,
 │       servicios, records y Optional.
 │
+├── listasArrayList/
+│   └── Prácticas con List, ArrayList, Iterator, Optional, Comparator,
+│       Comparable, Collections.sort y administración de productos.
+│
+├── gestion_ticket/
+│   └── Mini proyecto de gestión de tickets con LinkedList, ListIterator,
+│       records, enum de prioridad y operaciones al inicio/final de la lista.
+│
+├── conjuntos/
+│   └── Prácticas iniciales con Set y HashSet para almacenar valores únicos.
+│
 ├── app_library/
 │   └── Mini proyecto de biblioteca con Book, Library e ISBN.
 │       Practica arreglos dinámicos, búsqueda, eliminación, validación,
@@ -126,6 +140,9 @@ JavaHitss/
 | `archivos` | Manejo de archivos | Escritura con `FileWriter`/`BufferedWriter` y lectura con `Scanner`, `BufferedReader`, `Files.readString`, `Files.lines` y `Files.readAllLines`. |
 | `genericos` | Genéricos y Optional | `Box<T>`, `Pair<K,V>`, `Response<T,E>`, métodos genéricos, `Repository<T>`, records genéricos y `Optional`. |
 | `gestionEmpleados` | Mini proyecto con Repository y Service | `Employee`, `Repository<T, ID>`, `EmployeeRepositoryImpl`, `EmployeeService`, `Optional`, `map`, `orElse` e `ifPresent`. |
+| `listasArrayList` | Listas y ordenamiento | `ArrayList`, `List`, `Iterator`, `ProductManager`, `Optional`, `Comparable<Product>`, `Comparator`, `Collections.sort()` y `List.sort()`. |
+| `gestion_ticket` | Mini proyecto con LinkedList | `Ticket`, enum `Priority`, `ManagerTicket`, `LinkedList`, `ListIterator`, recorridos hacia adelante/atrás e inserción/eliminación de tickets. |
+| `conjuntos` | Conjuntos | `Set`, `HashSet`, inserción de elementos y manejo automático de valores duplicados. |
 | `app_library` | Mini proyecto de biblioteca | `Book`, `Library`, `ISBN`, validaciones, búsqueda, eliminación, autores únicos, ISBN únicos, `equals`, `hashCode` y `toString`. |
 | `sistema_notificaciones` | Sistema de notificaciones empresariales | Records de notificación, sealed interface `Notification`, enum `NotificationType`, procesador, validaciones, switch moderno y Javadoc. |
 | `clasesSealed/records` | Records | Declaración de `record`, constructor compacto, validaciones, métodos propios, métodos estáticos y comparación con clases normales. |
@@ -145,12 +162,28 @@ Además del README principal, varios proyectos tienen su propio README con objet
 - `archivos/README.md`
 - `genericos/README.md`
 - `gestionEmpleados/README.md`
+- `listasArrayList/README.md`
+- `gestion_ticket/README.md`
+- `conjuntos/README.md`
 - `app_library/README.md`
 - `clasesSealed/README.md`
 - `clasesSealed/records/README.md`
 - `sistema_notificaciones/README.md`
 
 ## Mini proyectos y prácticas destacadas
+
+### `gestion_ticket`
+
+Mini proyecto para administrar tickets usando `LinkedList`.
+
+- `Ticket` como `record`.
+- Enum `Priority` con prioridades `LOW`, `MEDIUM`, `HIGH` y `CRITICAL`.
+- Clase `ManagerTicket` para administrar la lista.
+- Inserción al inicio y al final.
+- Obtención del primer y último ticket.
+- Inserción por posición.
+- Eliminación del primer y último ticket.
+- Recorrido hacia adelante y hacia atrás con `ListIterator`.
 
 ### `gestionEmpleados`
 
@@ -187,6 +220,29 @@ Mini proyecto orientado a objetos que simula una biblioteca.
 - Búsqueda, eliminación, autores únicos e ISBN únicos.
 - Uso de `Arrays.copyOf()`.
 - Sobrescritura de `equals()`, `hashCode()` y `toString()`.
+
+### `listasArrayList`
+
+Práctica de colecciones basada en listas.
+
+- Uso de `List` y `ArrayList`.
+- Recorridos con `for`, `for-each` y `forEach()`.
+- Eliminación segura con `Iterator`.
+- Manejo de productos con `ProductManager`.
+- Búsqueda con `Optional<Product>`.
+- Ordenamiento con `Comparable<Product>`.
+- Ordenamiento con `Comparator` por precio y nombre.
+- Uso de `Collections.sort()` y `List.sort()`.
+
+### `conjuntos`
+
+Práctica inicial de conjuntos en Java.
+
+- Uso de la interfaz `Set`.
+- Implementación con `HashSet`.
+- Inserción de elementos con `add()`.
+- Comprobación del valor booleano que devuelve `add()`.
+- Evitar duplicados de forma automática.
 
 ### `archivos`
 
@@ -231,6 +287,30 @@ Cada carpeta funciona como un proyecto o conjunto de ejercicios independiente. P
 2. Entra a la carpeta del tema que quieras revisar.
 3. Busca una clase con método `main`, normalmente dentro de `src`.
 4. Ejecuta el archivo desde VS Code o desde terminal.
+
+Ejemplo para gestión de tickets:
+
+```bash
+cd gestion_ticket/src
+javac test/Test.java
+java test.Test
+```
+
+Ejemplo para conjuntos:
+
+```bash
+cd conjuntos/src
+javac test/App.java
+java test.App
+```
+
+Ejemplo para listas y productos:
+
+```bash
+cd listasArrayList/src
+javac test/TestProduct.java
+java test.TestProduct
+```
 
 Ejemplo para gestión de empleados:
 
@@ -304,14 +384,16 @@ Para la mayoría de ejercicios basta con tener Java instalado. Para las práctic
 - [x] Polimorfismo
 - [x] Enumeraciones (`enum`)
 - [x] Excepciones checked y unchecked
-- [x] Manejo de archivos
+- [x] Lectura y escritura de archivos
 - [x] Genéricos
-- [x] Optional
+- [x] `Optional`
+- [x] Colecciones con `List` y `ArrayList`
+- [x] Iteradores
+- [x] Ordenamiento con `Comparable` y `Comparator`
+- [x] Gestión de tickets con `LinkedList`
+- [x] Conjuntos con `Set` y `HashSet`
 - [x] Records
 - [x] Sealed classes
-- [x] Mini proyecto de biblioteca
-- [x] Sistema de notificaciones empresariales
-- [x] Gestión de empleados con Repository y Service
 - [x] Javadoc
 - [ ] Proyecto final con Spring Boot
 
