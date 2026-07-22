@@ -1,18 +1,77 @@
-## Getting Started
+# Listas y ArrayList
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Proyecto de práctica enfocado en el uso de **listas** en Java, principalmente `List` y `ArrayList`.
 
-## Folder Structure
+También se agregan ejemplos de búsqueda con `Optional`, eliminación segura con `Iterator` y ordenamiento con `Comparable`, `Comparator`, `Collections.sort()` y `List.sort()`.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Practicar el manejo de colecciones ordenadas, administración de productos y distintas formas de recorrer, buscar, modificar y ordenar elementos.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Interfaz `List`
+- Implementación `ArrayList`
+- Métodos `add()`, `get()`, `set()`, `remove()` y `size()`
+- Recorridos con `for`, `for-each` y `forEach()`
+- Eliminación segura con `Iterator`
+- Búsqueda con `Optional<Product>`
+- Records con `Product`
+- Administración de productos con `ProductManager`
+- Implementación de `Comparable<Product>`
+- Uso de `Comparator`
+- Ordenamiento con `Collections.sort()`
+- Ordenamiento con `List.sort()`
 
-## Dependency Management
+## Estructura del proyecto
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+listasArrayList/
+└── src/
+    ├── models/
+    │   └── Product.java
+    │
+    ├── services/
+    │   └── ProductManager.java
+    │
+    └── test/
+        ├── Test.java
+        ├── TestIterator.java
+        └── TestProduct.java
+```
+
+## Clases principales
+
+| Clase | Responsabilidad |
+|---|---|
+| `Product` | Record que representa un producto con id, nombre y precio. |
+| `ProductManager` | Administra una lista de productos. |
+| `Test` | Practica operaciones básicas con `ArrayList`. |
+| `TestIterator` | Muestra eliminación segura usando `Iterator`. |
+| `TestProduct` | Prueba administración, búsqueda y ordenamiento de productos. |
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd listasArrayList/src
+javac test/TestProduct.java
+java test.TestProduct
+```
+
+También puedes ejecutar las prácticas básicas:
+
+```bash
+javac test/Test.java
+java test.Test
+```
+
+```bash
+javac test/TestIterator.java
+java test.TestIterator
+```
+
+## Qué se aprende
+
+Este módulo ayuda a entender cómo trabajar con colecciones dinámicas en Java y cómo ordenar objetos usando diferentes criterios.
