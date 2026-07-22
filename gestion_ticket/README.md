@@ -1,18 +1,67 @@
-## Getting Started
+# Gestión de Tickets
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Mini proyecto en Java para practicar el uso de **`LinkedList`** mediante un sistema sencillo de gestión de tickets.
 
-## Folder Structure
+El proyecto permite agregar, obtener, insertar, eliminar y recorrer tickets usando operaciones propias de listas enlazadas.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Practicar el manejo de `LinkedList`, `ListIterator`, records y enumeraciones dentro de un mini proyecto orientado a objetos.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- `LinkedList`
+- Interfaz `List`
+- `ListIterator`
+- Recorrido hacia adelante
+- Recorrido hacia atrás
+- Inserción al inicio con `addFirst()`
+- Inserción al final con `addLast()`
+- Obtención del primer elemento con `getFirst()`
+- Obtención del último elemento con `getLast()`
+- Eliminación del primer elemento con `removeFirst()`
+- Eliminación del último elemento con `removeLast()`
+- Inserción por índice
+- Records
+- Enumeraciones (`enum`)
 
-## Dependency Management
+## Estructura del proyecto
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+gestion_ticket/
+└── src/
+    ├── enums/
+    │   └── Priority.java
+    │
+    ├── models/
+    │   └── Ticket.java
+    │
+    ├── services/
+    │   └── ManagerTicket.java
+    │
+    └── test/
+        └── Test.java
+```
+
+## Clases principales
+
+| Clase | Responsabilidad |
+|---|---|
+| `Priority` | Enum con las prioridades `LOW`, `MEDIUM`, `HIGH` y `CRITICAL`. |
+| `Ticket` | Record que representa un ticket con id, título y prioridad. |
+| `ManagerTicket` | Administra la lista enlazada de tickets. |
+| `Test` | Ejecuta el flujo de prueba desde consola. |
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd gestion_ticket/src
+javac test/Test.java
+java test.Test
+```
+
+## Qué se aprende
+
+Este proyecto muestra cuándo una `LinkedList` puede ser útil para trabajar con operaciones frecuentes al inicio y al final de una colección, además de practicar recorridos bidireccionales con `ListIterator`.
