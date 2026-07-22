@@ -1,18 +1,41 @@
-## Getting Started
+# Conjuntos
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Proyecto de práctica enfocado en el uso de **conjuntos (`Set`)** en Java.
 
-## Folder Structure
+Este módulo muestra cómo almacenar valores únicos usando la interfaz `Set` y la implementación `HashSet`.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Entender cómo funcionan los conjuntos en Java y cómo evitan elementos duplicados de forma automática.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Interfaz `Set`
+- Implementación `HashSet`
+- Inserción de elementos con `add()`
+- Valor booleano que devuelve `add()`
+- Elementos únicos
+- Impresión de colecciones
 
-## Dependency Management
+## Estructura del proyecto
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+conjuntos/
+└── src/
+    └── test/
+        └── App.java
+```
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd conjuntos/src
+javac test/App.java
+java test.App
+```
+
+## Qué se aprende
+
+Este módulo ayuda a entender que un `Set` no guarda elementos repetidos. Si se intenta agregar un valor que ya existe, el conjunto lo ignora y `add()` devuelve `false`.
