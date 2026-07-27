@@ -9,5 +9,6 @@ public class TestLinkedList {
         names.add("Emilio");
         names.add("Juan");
         names.add("null");
+        System.out.println(names);
     }
 }
