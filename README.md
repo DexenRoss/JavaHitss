@@ -29,6 +29,7 @@ La intención es construir una base sólida de Java para después aplicarla en A
 
 - Java 21
 - Spring Boot 4.1.0
+- Spring Web MVC
 - Maven y Maven Wrapper
 - VS Code
 - Git y GitHub
@@ -47,6 +48,7 @@ JavaHitss/
 ├── herencia/                     Herencia, composición y sobrescritura.
 ├── abstraccion/                  Clases abstractas e interfaces.
 ├── polimorfismo/                 Polimorfismo, casting, records y sealed interfaces.
+├── payment/                      Polimorfismo aplicado a métodos de pago.
 ├── enumeraciones/                Enums con atributos, métodos e interfaces.
 ├── excepciones/                  Excepciones checked, unchecked, throw, throws y try-catch.
 ├── archivos/                     Lectura y escritura de archivos.
@@ -86,6 +88,7 @@ JavaHitss/
 | `herencia` | Herencia | Clases padre/hijas, composición, constructores, bonos y `@Override`. |
 | `abstraccion` | Abstracción e interfaces | Clases abstractas, métodos abstractos, interfaces y métodos default/static/private. |
 | `polimorfismo` | Polimorfismo | Referencias polimórficas, casting, pattern matching, records y sealed interface. |
+| `payment` | Pagos | Clase base `Payment`, `CashPayment`, `CreditCardPayment`, `PaypalPayment` y polimorfismo. |
 | `enumeraciones` | Enums | Enums simples, con atributos, métodos, métodos abstractos e interfaces. |
 | `excepciones` | Manejo de errores | Excepciones checked/unchecked, `throw`, `throws`, `try-catch` y archivos. |
 | `archivos` | Manejo de archivos | `FileWriter`, `BufferedWriter`, `Scanner`, `BufferedReader`, `Files` y `Path`. |
