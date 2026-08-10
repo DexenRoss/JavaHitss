@@ -1,18 +1,63 @@
-## Getting Started
+# Programación Funcional
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Proyecto de práctica enfocado en **programación funcional en Java**.
 
-## Folder Structure
+Este módulo introduce lambdas, interfaces funcionales, reglas de negocio expresadas como funciones y primeros ejercicios con streams.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Entender cómo Java permite trabajar con funciones como comportamiento, simplificar código con lambdas y aplicar operaciones sobre colecciones de forma declarativa.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Lambdas
+- Interfaces funcionales
+- Métodos de referencia
+- Reglas de negocio con interfaces
+- Records como modelos de datos
+- Primeros ejercicios con streams
+- Separación por paquetes
 
-## Dependency Management
+## Estructura
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+programacion_funcional/
+└── src/
+    ├── App.java
+    ├── TestFuncional.java
+    ├── TestInterface.java
+    ├── TestStream.java
+    │
+    ├── interfaces/
+    │   └── ProductRule.java
+    │
+    └── models/
+        ├── Employee.java
+        └── Product.java
+```
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd programacion_funcional/src
+javac App.java
+java App
+```
+
+También se pueden ejecutar las clases de prueba:
+
+```bash
+javac TestFuncional.java
+java TestFuncional
+```
+
+```bash
+javac TestInterface.java
+java TestInterface
+```
+
+## Qué se aprende
+
+Este módulo ayuda a entender cómo representar comportamiento con lambdas e interfaces funcionales, dejando la base para trabajar después con streams y procesamiento de colecciones.
