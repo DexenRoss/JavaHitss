@@ -1,18 +1,63 @@
-## Getting Started
+# Programación Orientada a Objetos
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Proyecto de práctica para introducir conceptos básicos de **programación orientada a objetos** en Java.
 
-## Folder Structure
+Este módulo trabaja con clases simples como personas, estudiantes, empleados, productos y cuentas bancarias.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Practicar la creación de clases, atributos, métodos, constructores y objetos antes de avanzar a temas como encapsulamiento, herencia, abstracción y polimorfismo.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Clases y objetos
+- Atributos
+- Métodos
+- Constructores
+- Instanciación de objetos
+- Métodos de prueba
+- Modelado básico de entidades
 
-## Dependency Management
+## Estructura
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+poo/
+└── src/
+    └── clases/
+        ├── CuentaBancaria.java
+        ├── Empleado.java
+        ├── Estudiante.java
+        ├── Persona.java
+        ├── Product.java
+        ├── TestCuenta.java
+        ├── TestEmpleado.java
+        ├── TestEstudiante.java
+        ├── TestPersona.java
+        └── TestProduct.java
+```
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd poo/src
+javac clases/TestPersona.java
+java clases.TestPersona
+```
+
+También se pueden ejecutar otras clases de prueba:
+
+```bash
+javac clases/TestCuenta.java
+java clases.TestCuenta
+```
+
+```bash
+javac clases/TestEmpleado.java
+java clases.TestEmpleado
+```
+
+## Qué se aprende
+
+Este módulo funciona como base para comprender cómo Java representa entidades mediante clases y cómo los objetos agrupan estado y comportamiento.
