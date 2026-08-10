@@ -1,18 +1,55 @@
-## Getting Started
+# Atención de Tickets
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Mini proyecto para practicar atención de tickets usando colas en Java.
 
-## Folder Structure
+Este módulo modela tickets de soporte y los atiende mediante estructuras como `Queue` y `PriorityQueue`, útiles cuando el orden de atención importa.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Entender cómo usar colas para procesar elementos en orden y cómo una cola con prioridad puede cambiar el orden de atención según la urgencia de cada ticket.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- `Queue`
+- `PriorityQueue`
+- Atención FIFO
+- Atención por prioridad
+- Records como modelo de datos
+- Servicios para encapsular operaciones
+- Comparación y ordenamiento de elementos
 
-## Dependency Management
+## Estructura
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+atencion_tickets/
+└── src/
+    ├── App.java
+    ├── TestPriorityQueue.java
+    │
+    ├── models/
+    │   └── SupportTicket.java
+    │
+    └── services/
+        └── TicketService.java
+```
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd atencion_tickets/src
+javac App.java
+java App
+```
+
+También se puede ejecutar la prueba de prioridad:
+
+```bash
+javac TestPriorityQueue.java
+java TestPriorityQueue
+```
+
+## Qué se aprende
+
+Este proyecto muestra cómo las colas permiten modelar procesos de atención, turnos y prioridades, algo común en sistemas de soporte o atención al cliente.
