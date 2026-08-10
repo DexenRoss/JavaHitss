@@ -1,18 +1,49 @@
-## Getting Started
+# Atención de Emergencias
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Mini proyecto para practicar la atención de emergencias hospitalarias usando colecciones, servicios y comparadores.
 
-## Folder Structure
+El módulo representa casos de emergencia y permite ordenar o atender los casos según reglas de prioridad.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Modelar un flujo básico de atención hospitalaria donde los casos no se atienden únicamente por orden de llegada, sino considerando su prioridad o urgencia.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Records como modelo de datos
+- Servicios para administrar casos
+- Comparadores personalizados
+- Priorización de elementos
+- Colecciones aplicadas
+- Separación por paquetes
 
-## Dependency Management
+## Estructura
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+atencion_de_emergencias/
+└── src/
+    ├── App.java
+    │
+    ├── model/
+    │   └── EmergencyCase.java
+    │
+    ├── service/
+    │   └── EmergencyService.java
+    │
+    └── utils/
+        └── EmergencyComparator.java
+```
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd atencion_de_emergencias/src
+javac App.java
+java App
+```
+
+## Qué se aprende
+
+Este proyecto muestra cómo aplicar comparadores y servicios para resolver un problema más realista: decidir el orden de atención de casos según prioridad.
