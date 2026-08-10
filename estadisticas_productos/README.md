@@ -1,18 +1,55 @@
-## Getting Started
+# Estadísticas de Productos
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Mini proyecto para practicar el uso de mapas y servicios calculando estadísticas de productos.
 
-## Folder Structure
+El módulo trabaja con modelos y servicios para registrar información, contar datos y generar resultados derivados a partir de colecciones.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Aplicar `Map` y servicios en un escenario de estadísticas, reforzando cómo agrupar, contar y consultar información de productos.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- `Map`
+- Conteo de información
+- Acumulación de estadísticas
+- Separación por modelo y servicios
+- Uso de `LinkedHashMap` para conservar orden de inserción
+- Recorrido de estructuras clave-valor
 
-## Dependency Management
+## Estructura
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+estadisticas_productos/
+└── src/
+    ├── App.java
+    ├── TestLinkedHashMap.java
+    │
+    ├── model/
+    │   └── ProductStadistics.java
+    │
+    └── services/
+        ├── SalesProductStadisticService.java
+        └── SalesStadisticService.java
+```
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd estadisticas_productos/src
+javac App.java
+java App
+```
+
+También se puede ejecutar la práctica de `LinkedHashMap`:
+
+```bash
+javac TestLinkedHashMap.java
+java TestLinkedHashMap
+```
+
+## Qué se aprende
+
+Este proyecto ayuda a entender cómo usar mapas para transformar datos en información útil, como conteos, estadísticas y acumulados.
