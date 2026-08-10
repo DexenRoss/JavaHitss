@@ -1,18 +1,40 @@
-## Getting Started
+# Mapas
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Proyecto de práctica enfocado en el uso de **Map** en Java.
 
-## Folder Structure
+Este módulo introduce estructuras clave-valor para guardar, consultar y recorrer información asociada a una llave.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Practicar el uso de mapas para representar relaciones entre claves y valores, una estructura fundamental para registros, catálogos, conteos y búsquedas rápidas.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Interface `Map`
+- Uso de claves y valores
+- Inserción de elementos
+- Consulta por clave
+- Recorrido de mapas
+- Prácticas base para `HashMap`, `LinkedHashMap` y `TreeMap`
 
-## Dependency Management
+## Estructura
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+mapas/
+└── src/
+    └── App.java
+```
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd mapas/src
+javac App.java
+java App
+```
+
+## Qué se aprende
+
+Este módulo muestra cómo organizar información usando pares clave-valor y prepara la base para proyectos más completos como sistemas de clientes o estadísticas de productos.
