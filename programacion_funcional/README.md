@@ -15,6 +15,7 @@ Entender cómo Java permite trabajar con funciones como comportamiento, simplifi
 - Métodos de referencia
 - Reglas de negocio con interfaces
 - Records como modelos de datos
+- Listas inmutables con `List.of()`
 - Primeros ejercicios con streams
 - Separación por paquetes
 
@@ -35,6 +36,18 @@ programacion_funcional/
         ├── Employee.java
         └── Product.java
 ```
+
+## Archivos principales
+
+| Archivo | Qué practica |
+|---|---|
+| `App.java` | Ejemplos base de programación funcional. |
+| `TestFuncional.java` | Uso de lambdas y funciones simples. |
+| `TestInterface.java` | Reglas de negocio mediante una interfaz funcional. |
+| `TestStream.java` | Primer acercamiento a streams usando una lista de empleados. |
+| `ProductRule.java` | Contrato funcional para validar o evaluar productos. |
+| `Employee.java` | Record de empleado para ejercicios funcionales. |
+| `Product.java` | Record de producto para reglas y pruebas. |
 
 ## Cómo ejecutar
 
@@ -58,6 +71,13 @@ javac TestInterface.java
 java TestInterface
 ```
 
+```bash
+javac TestStream.java
+java TestStream
+```
+
 ## Qué se aprende
 
 Este módulo ayuda a entender cómo representar comportamiento con lambdas e interfaces funcionales, dejando la base para trabajar después con streams y procesamiento de colecciones.
+
+El avance más reciente agrega una base para practicar streams con una lista de empleados, preparando ejercicios como `filter`, `map`, `reduce`, `forEach` y acumulaciones sobre colecciones.
