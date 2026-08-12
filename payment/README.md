@@ -1,18 +1,47 @@
-## Getting Started
+# Payment
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Proyecto de práctica enfocado en polimorfismo aplicado a métodos de pago.
 
-## Folder Structure
+El módulo modela distintos tipos de pago y permite practicar una jerarquía donde varias clases comparten un contrato común, pero cada una implementa su propio comportamiento.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Aplicar programación orientada a objetos para representar pagos con efectivo, tarjeta y PayPal, reforzando herencia, sobrescritura y polimorfismo.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Herencia
+- Polimorfismo
+- Sobrescritura de métodos
+- Clases base y clases concretas
+- Validaciones básicas
+- Métodos comunes para distintos tipos de pago
 
-## Dependency Management
+## Estructura
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+payment/
+└── src/
+    ├── classes/
+    │   ├── Payment.java
+    │   ├── CashPayment.java
+    │   ├── CreditCardPayment.java
+    │   └── PaypalPayment.java
+    │
+    └── test/
+        └── Test.java
+```
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd payment/src
+javac test/Test.java
+java test.Test
+```
+
+## Qué se aprende
+
+Este proyecto muestra cómo trabajar con varias implementaciones de un mismo concepto, permitiendo tratar diferentes formas de pago de manera uniforme mediante polimorfismo.

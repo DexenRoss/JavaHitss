@@ -1,18 +1,41 @@
-## Getting Started
+# LinkedList
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Proyecto de práctica enfocado en el uso de **LinkedList** en Java.
 
-## Folder Structure
+Este módulo introduce listas enlazadas y operaciones básicas para agregar, recorrer y manipular elementos.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Entender cómo usar `LinkedList` como alternativa a `ArrayList`, especialmente cuando se practican operaciones de inserción, eliminación y recorrido.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- `LinkedList`
+- Operaciones básicas de listas
+- Inserción de elementos
+- Eliminación de elementos
+- Recorrido de elementos
+- Diferencias conceptuales entre listas basadas en arreglo y listas enlazadas
 
-## Dependency Management
+## Estructura
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+linkedList/
+└── src/
+    └── test/
+        └── TestLinkedList.java
+```
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd linkedList/src
+javac test/TestLinkedList.java
+java test.TestLinkedList
+```
+
+## Qué se aprende
+
+Este módulo refuerza el manejo de listas y prepara la base para ejercicios más completos como gestión de tickets con `LinkedList` y `ListIterator`.

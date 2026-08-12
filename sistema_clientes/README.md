@@ -1,18 +1,55 @@
-## Getting Started
+# Sistema de Clientes
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Mini proyecto para practicar el uso de **Map** aplicado a un sistema sencillo de clientes.
 
-## Folder Structure
+El proyecto organiza clientes por medio de claves, permitiendo registrar, consultar y administrar información de forma más directa que con listas simples.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Aplicar mapas en un caso más cercano a una aplicación real: un sistema de clientes con modelo, servicio y clase principal de prueba.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- `Map`
+- Búsqueda por clave
+- Registro de clientes
+- Actualización de información
+- Separación por paquetes
+- Uso de records como modelo de datos
+- Servicio para concentrar operaciones
 
-## Dependency Management
+## Estructura
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+sistema_clientes/
+└── src/
+    ├── App.java
+    ├── TestMap.java
+    │
+    ├── model/
+    │   └── Customer.java
+    │
+    └── services/
+        └── CustomerService.java
+```
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd sistema_clientes/src
+javac App.java
+java App
+```
+
+También se puede ejecutar la prueba de mapas:
+
+```bash
+javac TestMap.java
+java TestMap
+```
+
+## Qué se aprende
+
+Este proyecto refuerza cómo usar mapas para representar registros donde cada elemento puede encontrarse mediante una clave única.

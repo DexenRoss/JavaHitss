@@ -1,18 +1,44 @@
-## Getting Started
+# TreeSet
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Proyecto de práctica enfocado en **TreeSet** y conjuntos ordenados en Java.
 
-## Folder Structure
+Este módulo muestra cómo trabajar con elementos únicos que además se mantienen ordenados según su orden natural o reglas de comparación.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Practicar el uso de `TreeSet` y reforzar cómo funcionan los conjuntos ordenados, incluyendo operaciones de navegación sobre datos.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- `Set`
+- `TreeSet`
+- Elementos únicos
+- Ordenamiento natural
+- `NavigableSet`
+- Recorrido de conjuntos ordenados
+- Uso de records como modelo
 
-## Dependency Management
+## Estructura
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+treeSet/
+└── src/
+    ├── App.java
+    │
+    └── models/
+        └── Product.java
+```
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd treeSet/src
+javac App.java
+java App
+```
+
+## Qué se aprende
+
+Este módulo ayuda a entender la diferencia entre un conjunto sin orden garantizado y un conjunto ordenado, útil cuando se necesita evitar duplicados y mantener una secuencia definida.

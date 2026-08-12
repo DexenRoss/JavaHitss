@@ -4,42 +4,33 @@ Repositorio de práctica para el **Semillero de Talentos HITSS**, enfocado en re
 
 ## Descripción
 
-Este repositorio documenta mi avance en Java desde los fundamentos del lenguaje hasta conceptos de programación orientada a objetos, colecciones, manejo de archivos y características modernas del ecosistema Java.
+Este repositorio documenta mi avance en Java desde los fundamentos del lenguaje hasta programación orientada a objetos, colecciones, programación funcional y el inicio de desarrollo backend con **Spring Boot**.
 
-El objetivo es construir una base sólida para después aplicar estos conocimientos en proyectos backend con **Spring Boot**.
+La intención es construir una base sólida de Java para después aplicarla en APIs y proyectos backend reales.
 
 ## Temas principales
 
 - Fundamentos de Java
 - Variables, operadores y entrada de datos
-- Condicionales y ciclos
-- Arreglos y matrices
-- Encapsulamiento
-- Herencia y composición
-- Abstracción e interfaces
-- Polimorfismo
-- Enumeraciones (`enum`)
+- Condicionales, ciclos y arreglos
+- Programación orientada a objetos
+- Encapsulamiento, herencia, abstracción y polimorfismo
+- Interfaces, records, enums y sealed classes
 - Excepciones checked y unchecked
 - Lectura y escritura de archivos
-- Genéricos
-- `Optional`
-- Repositorios y servicios con tipos genéricos
-- Colecciones con `List`, `ArrayList`, `LinkedList` y `Set`
-- Iteradores y `ListIterator`
+- Genéricos y `Optional`
+- Colecciones: `List`, `ArrayList`, `LinkedList`, `Set`, `HashSet`, `TreeSet`, `Queue`, `PriorityQueue`, `Map`, `HashMap`, `LinkedHashMap` y `TreeMap`
 - Ordenamiento con `Comparable`, `Comparator`, `Collections.sort()` y `List.sort()`
-- Clases `final`
-- `records`
-- `sealed classes`
-- Switch moderno con pattern matching
-- Generación de documentación con Javadoc
-- Mini proyectos orientados a objetos
+- Programación funcional, lambdas, interfaces funcionales y streams
+- Mini proyectos de consola
+- Primer proyecto backend con Spring Boot
 
 ## Tecnologías usadas
 
-- Java
-- Java 14+ para prácticas con `switch expression`
-- Java 17+ para prácticas con `records` y `sealed classes`
-- Java 21+ para prácticas con `switch` moderno y pattern matching
+- Java 21
+- Spring Boot 4.1.0
+- Spring Web MVC
+- Maven y Maven Wrapper
 - VS Code
 - Git y GitHub
 - Javadoc
@@ -48,78 +39,39 @@ El objetivo es construir una base sólida para después aplicar estos conocimien
 
 ```text
 JavaHitss/
-├── variables/
-│   └── Fundamentos de Java, tipos primitivos, operadores, Scanner e instanceof.
-│
-├── controlFlujo/
-│   └── Condicionales, switch, switch expression, ciclos for, while y ciclos anidados.
-│
-├── arreglos/
-│   └── Arreglos, matrices, búsquedas, ordenamiento y métodos de la clase Arrays.
-│
-├── encapsulamineto/
-│   └── Atributos privados, getters, setters, validaciones y alcance de variables/métodos.
-│
-├── herencia/
-│   └── POO con clases padre e hijas, composición, constructores, excepciones,
-│       bonos, @Override y métodos polimórficos como showInformation().
-│
-├── abstraccion/
-│   └── Clases abstractas, métodos abstractos, métodos concretos, polimorfismo
-│       e interfaces.
-│
-├── polimorfismo/
-│   └── Prácticas de polimorfismo, casting, instanceof con pattern matching,
-│       clases abstractas, records, sealed interfaces y switch sobre tipos.
-│
-├── enumeraciones/
-│   └── Prácticas con enum, atributos, métodos, switch expressions,
-│       métodos abstractos en enum e implementación de interfaces.
-│
-├── excepciones/
-│   └── Prácticas con excepciones checked, unchecked, throw, throws y manejo con try-catch.
-│
-├── archivos/
-│   └── Prácticas de lectura y escritura de archivos con FileWriter,
-│       BufferedWriter, Scanner, BufferedReader, Files y Path.
-│
-├── genericos/
-│   └── Prácticas con clases, métodos e interfaces genéricas, Pair,
-│       Response, Repository, Optional y records genéricos.
-│
-├── gestionEmpleados/
-│   └── Mini proyecto de gestión de empleados usando Repository<T, ID>,
-│       servicios, records y Optional.
-│
-├── listasArrayList/
-│   └── Prácticas con List, ArrayList, Iterator, Optional, Comparator,
-│       Comparable, Collections.sort y administración de productos.
-│
-├── gestion_ticket/
-│   └── Mini proyecto de gestión de tickets con LinkedList, ListIterator,
-│       records, enum de prioridad y operaciones al inicio/final de la lista.
-│
-├── conjuntos/
-│   └── Prácticas iniciales con Set y HashSet para almacenar valores únicos.
-│
-├── app_library/
-│   └── Mini proyecto de biblioteca con Book, Library e ISBN.
-│       Practica arreglos dinámicos, búsqueda, eliminación, validación,
-│       clases final, equals, hashCode y toString.
-│
-├── sistema_notificaciones/
-│   └── Mini proyecto de sistema de notificaciones empresariales.
-│       Usa records, sealed interface, enum, validaciones, arreglos,
-│       switch moderno con pattern matching y Javadoc.
-│
-└── clasesSealed/
-    ├── records/
-    │   └── Prácticas con records, constructores compactos, métodos propios
-    │       y comparación contra clases tradicionales.
-    │
-    └── sealed/
-        └── Prácticas con sealed, non-sealed y final classes usando una jerarquía
-            de vehículos.
+├── variables/                    Fundamentos, tipos de datos, operadores y entrada de usuario.
+├── controlFlujo/                 Condicionales, switch y ciclos.
+├── arreglos/                     Arreglos, matrices, ordenamiento y métodos de Arrays.
+├── poo/                          Primeras prácticas de POO con clases y objetos.
+├── encapsulamiento/              Encapsulamiento con Customer.
+├── encapsulamineto/              Encapsulamiento con Employee y validaciones.
+├── herencia/                     Herencia, composición y sobrescritura.
+├── abstraccion/                  Clases abstractas e interfaces.
+├── polimorfismo/                 Polimorfismo, casting, records y sealed interfaces.
+├── payment/                      Polimorfismo aplicado a métodos de pago.
+├── enumeraciones/                Enums con atributos, métodos e interfaces.
+├── excepciones/                  Excepciones checked, unchecked, throw, throws y try-catch.
+├── archivos/                     Lectura y escritura de archivos.
+├── genericos/                    Clases, métodos, interfaces y records genéricos.
+├── gestionEmpleados/            Repository, Service, records y Optional.
+├── listasArrayList/              List, ArrayList, Iterator, Optional y ordenamiento.
+├── linkedList/                   LinkedList y operaciones básicas de listas enlazadas.
+├── gestion_ticket/               Gestión de tickets con LinkedList y ListIterator.
+├── conjuntos/                    Set y HashSet.
+├── treeSet/                      TreeSet, NavigableSet y ordenamiento natural.
+├── sistema_productos/            Productos, historial de acceso, LinkedHashSet y TreeMap.
+├── productos_favoritos/          Productos favoritos con Set y lógica de servicio.
+├── mapas/                        Map y operaciones básicas con clave-valor.
+├── sistema_clientes/             Sistema de clientes usando Map y servicios.
+├── estadisticas_productos/       Estadísticas de productos con Map y servicios.
+├── atencion_tickets/             Atención de tickets con Queue y PriorityQueue.
+├── citasMedicas/                 Sistema de citas médicas con colas y prioridades.
+├── atencion_de_emergencias/      Atención de emergencias hospitalarias por prioridad.
+├── programacion_funcional/       Lambdas, interfaces funcionales, reglas y streams.
+├── sistema_notificaciones/       Sistema de notificaciones con records, sealed interface y Javadoc.
+├── app_library/                  Mini proyecto de biblioteca.
+├── clasesSealed/                 Records y sealed classes.
+└── springboot-course/            Primer proyecto backend con Spring Boot.
 ```
 
 > Nota: la carpeta `encapsulamineto` conserva el nombre que tiene actualmente en el repositorio.
@@ -128,191 +80,91 @@ JavaHitss/
 
 | Carpeta | Tema principal | Qué se practica |
 |---|---|---|
-| `variables` | Fundamentos de Java | Variables primitivas, operadores matemáticos/lógicos, `instanceof` y entrada con `Scanner`. |
-| `controlFlujo` | Flujo de control | `if`, `switch`, `switch expression`, `yield`, ciclos `for`, `while`, ciclos anidados y números aleatorios. |
-| `arreglos` | Arreglos y matrices | Creación, llenado y recorrido de arreglos; `Arrays.sort`, `Arrays.fill`, `Arrays.binarySearch`, `Arrays.copyOf`, matrices y cálculo de promedios. |
-| `encapsulamineto` | Encapsulamiento | Atributos privados, getters/setters, validaciones de datos, métodos de actualización y alcance de miembros. |
-| `herencia` | POO con herencia | Clases `Person`, `Employee`, `Teacher`, `Administrative`, `Sales`, composición, constructores, excepciones, bonos y `@Override`. |
-| `abstraccion` | Abstracción e interfaces | Clases abstractas `Vehicle` y `Shape`, clases concretas, interfaces `Flyable` y `Printer`, métodos `default`, `static` y `private`. |
-| `polimorfismo` | Polimorfismo y tipos sellados | `Employee`, `Developer`, `Manager`, `instanceof`, casting, `sealed interface Result`, records y switch por tipo. |
-| `enumeraciones` | Enumeraciones | `OrderStatus`, `Priority`, `UserRole`, `Season`, `Operation`, `DocumentType`, switch expressions, métodos abstractos e interfaces. |
-| `excepciones` | Manejo de errores | Excepciones checked y unchecked, `InsufficientStockException`, `InvalidOrderException`, `throw`, `throws` y `try-catch`. |
-| `archivos` | Manejo de archivos | Escritura con `FileWriter`/`BufferedWriter` y lectura con `Scanner`, `BufferedReader`, `Files.readString`, `Files.lines` y `Files.readAllLines`. |
-| `genericos` | Genéricos y Optional | `Box<T>`, `Pair<K,V>`, `Response<T,E>`, métodos genéricos, `Repository<T>`, records genéricos y `Optional`. |
-| `gestionEmpleados` | Mini proyecto con Repository y Service | `Employee`, `Repository<T, ID>`, `EmployeeRepositoryImpl`, `EmployeeService`, `Optional`, `map`, `orElse` e `ifPresent`. |
-| `listasArrayList` | Listas y ordenamiento | `ArrayList`, `List`, `Iterator`, `ProductManager`, `Optional`, `Comparable<Product>`, `Comparator`, `Collections.sort()` y `List.sort()`. |
-| `gestion_ticket` | Mini proyecto con LinkedList | `Ticket`, enum `Priority`, `ManagerTicket`, `LinkedList`, `ListIterator`, recorridos hacia adelante/atrás e inserción/eliminación de tickets. |
-| `conjuntos` | Conjuntos | `Set`, `HashSet`, inserción de elementos y manejo automático de valores duplicados. |
-| `app_library` | Mini proyecto de biblioteca | `Book`, `Library`, `ISBN`, validaciones, búsqueda, eliminación, autores únicos, ISBN únicos, `equals`, `hashCode` y `toString`. |
-| `sistema_notificaciones` | Sistema de notificaciones empresariales | Records de notificación, sealed interface `Notification`, enum `NotificationType`, procesador, validaciones, switch moderno y Javadoc. |
-| `clasesSealed/records` | Records | Declaración de `record`, constructor compacto, validaciones, métodos propios, métodos estáticos y comparación con clases normales. |
-| `clasesSealed/sealed` | Sealed classes | Jerarquías controladas con `sealed`, `permits`, `final` y `non-sealed`. |
-| `Spring Boot` | Siguiente etapa | Desarrollo backend aplicando los fundamentos aprendidos durante el semillero. |
+| `variables` | Fundamentos | Variables, tipos, operadores, cadenas y lectura con `Scanner`. |
+| `controlFlujo` | Flujo de control | `if`, `switch`, `switch expression`, ciclos y ejercicios básicos. |
+| `arreglos` | Arreglos y matrices | Arrays, matrices, búsquedas, ordenamiento y promedios. |
+| `poo` | POO básica | Clases, objetos, atributos, métodos, constructores y entidades simples. |
+| `encapsulamiento` / `encapsulamineto` | Encapsulamiento | Atributos privados, getters, setters y validaciones. |
+| `herencia` | Herencia | Clases padre/hijas, composición, constructores, bonos y `@Override`. |
+| `abstraccion` | Abstracción e interfaces | Clases abstractas, métodos abstractos, interfaces y métodos default/static/private. |
+| `polimorfismo` | Polimorfismo | Referencias polimórficas, casting, pattern matching, records y sealed interface. |
+| `payment` | Pagos | Clase base `Payment`, `CashPayment`, `CreditCardPayment`, `PaypalPayment` y polimorfismo. |
+| `enumeraciones` | Enums | Enums simples, con atributos, métodos, métodos abstractos e interfaces. |
+| `excepciones` | Manejo de errores | Excepciones checked/unchecked, `throw`, `throws`, `try-catch` y archivos. |
+| `archivos` | Manejo de archivos | `FileWriter`, `BufferedWriter`, `Scanner`, `BufferedReader`, `Files` y `Path`. |
+| `genericos` | Genéricos | `Box<T>`, `Pair<K,V>`, `Response<T,E>`, `Repository<T>`, records genéricos y `Optional`. |
+| `gestionEmpleados` | Repository + Service | `Repository<T, ID>`, `EmployeeService`, `Optional`, `map`, `orElse` e `ifPresent`. |
+| `listasArrayList` | Listas | `ArrayList`, `Iterator`, búsqueda con `Optional`, `Comparable` y `Comparator`. |
+| `linkedList` | LinkedList | Operaciones básicas sobre listas enlazadas. |
+| `gestion_ticket` | Tickets | `LinkedList`, `ListIterator`, inserción, eliminación y recorrido bidireccional. |
+| `conjuntos` | Sets | `HashSet`, elementos únicos y comportamiento de `add()`. |
+| `treeSet` | Sets ordenados | `TreeSet`, ordenamiento natural y navegación de conjuntos. |
+| `sistema_productos` | Colecciones aplicadas | Historial de productos, registros, `LinkedHashSet`, `TreeMap` y lógica de servicio. |
+| `productos_favoritos` | Favoritos | Set de productos favoritos y operaciones de servicio. |
+| `mapas` | Map | Estructuras clave-valor y operaciones básicas con mapas. |
+| `sistema_clientes` | Clientes con Map | Registro, búsqueda y administración de clientes con mapas. |
+| `estadisticas_productos` | Estadísticas | Conteo y acumulación de datos con mapas y servicios. |
+| `atencion_tickets` | Queue | Atención de tickets con colas y prioridades. |
+| `citasMedicas` | Citas médicas | Manejo de citas, ordenamiento y atención por prioridad. |
+| `atencion_de_emergencias` | Emergencias | Priorización de casos hospitalarios con comparadores y servicios. |
+| `programacion_funcional` | Programación funcional | Lambdas, interfaces funcionales, reglas, métodos de referencia y streams. |
+| `sistema_notificaciones` | Notificaciones | Records, sealed interface, enum, validaciones, switch moderno y Javadoc. |
+| `springboot-course` | Spring Boot | Maven, Spring Web MVC, controladores REST, endpoints y records de respuesta. |
 
-## Documentación por módulo
+## Mini proyectos destacados
 
-Además del README principal, varios proyectos tienen su propio README con objetivo, estructura, conceptos practicados y comandos de ejecución:
+### `springboot-course`
 
-- `encapsulamineto/README.md`
-- `herencia/README.md`
-- `abstraccion/README.md`
-- `polimorfismo/README.md`
-- `enumeraciones/README.md`
-- `excepciones/README.md`
-- `archivos/README.md`
-- `genericos/README.md`
-- `gestionEmpleados/README.md`
-- `listasArrayList/README.md`
-- `gestion_ticket/README.md`
-- `conjuntos/README.md`
-- `app_library/README.md`
-- `clasesSealed/README.md`
-- `clasesSealed/records/README.md`
-- `sistema_notificaciones/README.md`
+Primer proyecto backend del repositorio usando **Spring Boot**. El 10 de agosto se creó e inició el proyecto; se trabajaron los primeros controladores y records:
 
-## Mini proyectos y prácticas destacadas
+- `HelloController` con endpoints `/hello`, `/saludo` y `/usuario`.
+- `StudentController` con base `/api` y endpoints `/student`, `/course` y `/status`.
+- Record `User` para responder información de usuario.
+- Record `Student` para responder información de estudiante.
+- Configuración Maven con Java 21 y Spring Boot 4.1.0.
 
-### `gestion_ticket`
+### `programacion_funcional`
 
-Mini proyecto para administrar tickets usando `LinkedList`.
+Prácticas de programación funcional en Java:
 
-- `Ticket` como `record`.
-- Enum `Priority` con prioridades `LOW`, `MEDIUM`, `HIGH` y `CRITICAL`.
-- Clase `ManagerTicket` para administrar la lista.
-- Inserción al inicio y al final.
-- Obtención del primer y último ticket.
-- Inserción por posición.
-- Eliminación del primer y último ticket.
-- Recorrido hacia adelante y hacia atrás con `ListIterator`.
+- Lambdas.
+- Interfaces funcionales.
+- Reglas de negocio con `ProductRule`.
+- Uso de records `Product` y `Employee`.
+- Primeros ejercicios con streams.
 
-### `gestionEmpleados`
+### `atencion_de_emergencias`
 
-Mini proyecto para practicar una estructura tipo repositorio/servicio usando genéricos y `Optional`.
+Mini proyecto de atención hospitalaria que organiza emergencias por prioridad:
 
-- `Employee` como `record`.
-- Interface `Repository<T, ID>`.
-- Implementación `EmployeeRepositoryImpl`.
-- Interface `EmployeeService`.
-- Implementación `EmployeeServiceImpl`.
-- Búsqueda por identificador.
-- Uso de `Optional.empty()`, `Optional.of()`, `map()`, `ifPresent()` y `orElse()`.
+- Modelo `EmergencyCase`.
+- Servicio `EmergencyService`.
+- Comparador `EmergencyComparator`.
+- Atención de casos según prioridad.
 
-### `sistema_notificaciones`
+### `citasMedicas`
 
-Mini proyecto en Java para representar y procesar distintos tipos de notificaciones empresariales.
+Mini proyecto de gestión de citas médicas:
 
-- Notificaciones por correo electrónico, SMS y push notification.
-- Interface sellada `Notification`.
-- Records `EmailNotification`, `SmsNotification` y `PushNotification`.
-- Enum `NotificationType`.
-- Clase `NotificationProcessor`.
-- Validaciones con `IllegalArgumentException`.
-- `switch` moderno con pattern matching.
-- Generación de documentación con Javadoc.
+- Modelo `Appointment`.
+- Servicio `AppointmentService`.
+- Comparador `AppointmentComparator`.
+- Registro y atención de citas.
 
-### `app_library`
+### `sistema_clientes`, `estadisticas_productos` y `mapas`
 
-Mini proyecto orientado a objetos que simula una biblioteca.
+Prácticas enfocadas en `Map` y variantes como `HashMap`, `LinkedHashMap` y `TreeMap`:
 
-- Registro de libros con `Book`.
-- Identificador `ISBN` como clase `final` con validación.
-- Administración de libros mediante `Library`.
-- Búsqueda, eliminación, autores únicos e ISBN únicos.
-- Uso de `Arrays.copyOf()`.
-- Sobrescritura de `equals()`, `hashCode()` y `toString()`.
+- Registro y consulta por clave.
+- Conteo y acumulación de estadísticas.
+- Preservación de orden de inserción.
+- Ordenamiento por clave.
 
-### `listasArrayList`
+## Cómo ejecutar
 
-Práctica de colecciones basada en listas.
+### Proyectos Java de consola
 
-- Uso de `List` y `ArrayList`.
-- Recorridos con `for`, `for-each` y `forEach()`.
-- Eliminación segura con `Iterator`.
-- Manejo de productos con `ProductManager`.
-- Búsqueda con `Optional<Product>`.
-- Ordenamiento con `Comparable<Product>`.
-- Ordenamiento con `Comparator` por precio y nombre.
-- Uso de `Collections.sort()` y `List.sort()`.
-
-### `conjuntos`
-
-Práctica inicial de conjuntos en Java.
-
-- Uso de la interfaz `Set`.
-- Implementación con `HashSet`.
-- Inserción de elementos con `add()`.
-- Comprobación del valor booleano que devuelve `add()`.
-- Evitar duplicados de forma automática.
-
-### `archivos`
-
-Práctica de manejo de archivos.
-
-- Escritura con `FileWriter` y `BufferedWriter`.
-- Lectura con `Scanner`.
-- Lectura con `BufferedReader`.
-- Lectura con `Files.readString()`.
-- Lectura con `Files.lines()`.
-- Lectura con `Files.readAllLines()`.
-- Manejo de `IOException` y `FileNotFoundException`.
-- Uso de try-with-resources.
-
-### `genericos`
-
-Práctica de genéricos en Java.
-
-- Clases genéricas `Box<T>`, `Pair<K,V>` y `Response<T,E>`.
-- Métodos genéricos.
-- Constructores genéricos.
-- Interfaces genéricas con `Repository<T>`.
-- Implementaciones con tipos concretos.
-- Records genéricos como `Result<T>`.
-- Uso de `Optional` para evitar valores nulos.
-
-### `excepciones`
-
-Práctica de manejo de excepciones.
-
-- Excepción checked `InsufficientStockException`.
-- Excepción unchecked `InvalidOrderException`.
-- Uso de `throw` y `throws`.
-- Captura con `try-catch`.
-- Validaciones de orden y stock.
-
-## Cómo ejecutar los ejercicios
-
-Cada carpeta funciona como un proyecto o conjunto de ejercicios independiente. Para probarlos:
-
-1. Abre el repositorio en VS Code.
-2. Entra a la carpeta del tema que quieras revisar.
-3. Busca una clase con método `main`, normalmente dentro de `src`.
-4. Ejecuta el archivo desde VS Code o desde terminal.
-
-Ejemplo para gestión de tickets:
-
-```bash
-cd gestion_ticket/src
-javac test/Test.java
-java test.Test
-```
-
-Ejemplo para conjuntos:
-
-```bash
-cd conjuntos/src
-javac test/App.java
-java test.App
-```
-
-Ejemplo para listas y productos:
-
-```bash
-cd listasArrayList/src
-javac test/TestProduct.java
-java test.TestProduct
-```
-
-Ejemplo para gestión de empleados:
+Entra al módulo y compila la clase de prueba correspondiente:
 
 ```bash
 cd gestionEmpleados/src
@@ -320,86 +172,78 @@ javac test/TestEmployee.java
 java test.TestEmployee
 ```
 
-Ejemplo para genéricos:
-
 ```bash
-cd genericos/src
-javac test/Test.java
-java test.Test
+cd programacion_funcional/src
+javac App.java
+java App
 ```
 
-Ejemplo para Optional:
-
 ```bash
-cd genericos/src
-javac optionals/TestOptional.java
-java optionals.TestOptional
+cd atencion_de_emergencias/src
+javac App.java
+java App
 ```
 
-Ejemplo para excepciones:
+### Proyecto Spring Boot
 
 ```bash
-cd excepciones/src
-javac test/TestExceptionNew.java
-java test.TestExceptionNew
+cd springboot-course
+./mvnw spring-boot:run
 ```
 
-Ejemplo para archivos:
+En Windows:
 
 ```bash
-cd archivos
-javac src/test/FileRead.java
-java -cp src test.FileRead
+cd springboot-course
+mvnw.cmd spring-boot:run
 ```
 
-Ejemplo para el sistema de notificaciones:
+Endpoints iniciales:
 
-```bash
-cd sistema_notificaciones/src
-javac classes/*.java enums/*.java service/*.java test/TestNotifications.java
-java test.TestNotifications
+```text
+GET /hello
+GET /saludo
+GET /usuario
+GET /api/student
+GET /api/course
+GET /api/status
 ```
-
-> Nota: algunas carpetas fueron creadas como proyectos Java de VS Code, por lo que pueden incluir carpetas como `bin`, `.vscode` o archivos generados por el entorno.
 
 ## Requisitos sugeridos
 
-Para la mayoría de ejercicios basta con tener Java instalado. Para las prácticas más recientes se recomienda:
-
-- Java 14 o superior para `switch expression`.
-- Java 17 o superior para `records` y `sealed classes`.
-- Java 21 o superior para `switch` moderno con pattern matching.
-- VS Code con Extension Pack for Java.
+- Java 21
+- VS Code con Extension Pack for Java
+- Maven o Maven Wrapper
+- Git
 
 ## Avance actual
 
-- [x] Variables y tipos de datos
-- [x] Operadores y entrada de datos
-- [x] Condicionales y ciclos
-- [x] Switch tradicional y switch expression
+- [x] Fundamentos de Java
+- [x] Control de flujo
 - [x] Arreglos y matrices
+- [x] Programación orientada a objetos
 - [x] Encapsulamiento
-- [x] Herencia y composición
+- [x] Herencia
 - [x] Abstracción e interfaces
 - [x] Polimorfismo
-- [x] Enumeraciones (`enum`)
-- [x] Excepciones checked y unchecked
-- [x] Lectura y escritura de archivos
+- [x] Enums
+- [x] Records y sealed classes
+- [x] Excepciones
+- [x] Archivos
 - [x] Genéricos
-- [x] `Optional`
-- [x] Colecciones con `List` y `ArrayList`
-- [x] Iteradores
-- [x] Ordenamiento con `Comparable` y `Comparator`
-- [x] Gestión de tickets con `LinkedList`
-- [x] Conjuntos con `Set` y `HashSet`
-- [x] Records
-- [x] Sealed classes
-- [x] Javadoc
-- [ ] Proyecto final con Spring Boot
+- [x] Optional
+- [x] Listas, conjuntos, colas y mapas
+- [x] Programación funcional
+- [x] Mini proyectos de consola
+- [x] Inicio de proyecto Spring Boot
+- [x] Controladores REST iniciales
+- [x] Records para respuestas HTTP
+- [ ] Servicios y lógica de negocio en Spring Boot
+- [ ] Persistencia de datos
 
 ## Próxima etapa
 
-Aplicar los fundamentos practicados en este repositorio dentro de un proyecto backend con **Spring Boot**, integrando buenas prácticas de programación orientada a objetos, estructura de capas y manejo de datos.
+Continuar el proyecto `springboot-course` agregando servicios, capas de negocio, manejo de peticiones HTTP más completas y eventualmente persistencia de datos.
 
 ## Autor
 

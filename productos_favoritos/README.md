@@ -1,18 +1,46 @@
-## Getting Started
+# Productos Favoritos
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Mini proyecto para practicar colecciones aplicadas a una lista de productos favoritos.
 
-## Folder Structure
+El módulo usa un modelo y un servicio para administrar productos favoritos, evitando duplicados y concentrando la lógica en una clase de servicio.
 
-The workspace contains two folders by default, where:
+## Objetivo
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Aplicar colecciones en un caso sencillo donde se requiere registrar, consultar y mostrar productos favoritos.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Temas practicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Colecciones en Java
+- Manejo de productos favoritos
+- Separación entre modelo, servicio y prueba
+- Uso de records como modelos
+- Operaciones de alta, consulta y recorrido
 
-## Dependency Management
+## Estructura
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+productos_favoritos/
+└── src/
+    ├── models/
+    │   └── FavoriteProducts.java
+    │
+    ├── services/
+    │   └── FavoriteProductService.java
+    │
+    └── test/
+        └── App.java
+```
+
+## Cómo ejecutar
+
+Desde la raíz del repositorio:
+
+```bash
+cd productos_favoritos/src
+javac test/App.java
+java test.App
+```
+
+## Qué se aprende
+
+Este proyecto ayuda a practicar cómo encapsular operaciones sobre colecciones dentro de servicios, acercando los ejercicios a una estructura más parecida a una aplicación real.
