@@ -4,9 +4,9 @@ Repositorio de práctica para el **Semillero de Talentos HITSS**, enfocado en re
 
 ## Descripción
 
-Este repositorio documenta mi avance en Java desde los fundamentos del lenguaje hasta programación orientada a objetos, colecciones, programación funcional y el inicio de desarrollo backend con **Spring Boot**.
+Este repositorio documenta mi avance en Java desde los fundamentos del lenguaje hasta programación orientada a objetos, colecciones, programación funcional y desarrollo backend con **Spring Boot**.
 
-La intención es construir una base sólida de Java para después aplicarla en APIs y proyectos backend reales.
+La intención es construir una base sólida de Java para aplicarla en APIs y proyectos backend reales.
 
 ## Temas principales
 
@@ -23,7 +23,12 @@ La intención es construir una base sólida de Java para después aplicarla en A
 - Ordenamiento con `Comparable`, `Comparator`, `Collections.sort()` y `List.sort()`
 - Programación funcional, lambdas, interfaces funcionales y streams
 - Mini proyectos de consola
-- Primer proyecto backend con Spring Boot
+- Spring Boot con controladores REST
+- Peticiones HTTP con `GET` y `POST`
+- JSON con `@RequestBody`
+- Variables de ruta con `@PathVariable`
+- Respuestas HTTP con `ResponseEntity`
+- Arquitectura por capas: `controller`, `service`, `repository` y `model`
 
 ## Tecnologías usadas
 
@@ -71,7 +76,7 @@ JavaHitss/
 ├── sistema_notificaciones/       Sistema de notificaciones con records, sealed interface y Javadoc.
 ├── app_library/                  Mini proyecto de biblioteca.
 ├── clasesSealed/                 Records y sealed classes.
-└── springboot-course/            Primer proyecto backend con Spring Boot.
+└── springboot-course/            Proyecto backend con Spring Boot y arquitectura por capas.
 ```
 
 > Nota: la carpeta `encapsulamineto` conserva el nombre que tiene actualmente en el repositorio.
@@ -107,21 +112,36 @@ JavaHitss/
 | `atencion_tickets` | Queue | Atención de tickets con colas y prioridades. |
 | `citasMedicas` | Citas médicas | Manejo de citas, ordenamiento y atención por prioridad. |
 | `atencion_de_emergencias` | Emergencias | Priorización de casos hospitalarios con comparadores y servicios. |
-| `programacion_funcional` | Programación funcional | Lambdas, interfaces funcionales, reglas, métodos de referencia y streams. |
+| `programacion_funcional` | Programación funcional | Lambdas, interfaces funcionales, reglas, métodos de referencia, `List.of()` y primeros streams. |
 | `sistema_notificaciones` | Notificaciones | Records, sealed interface, enum, validaciones, switch moderno y Javadoc. |
-| `springboot-course` | Spring Boot | Maven, Spring Web MVC, controladores REST, endpoints y records de respuesta. |
+| `springboot-course` | Spring Boot | Maven, Spring Web MVC, controladores REST, records, `GET`, `POST`, JSON, `PathVariable`, `ResponseEntity` y arquitectura por capas. |
 
 ## Mini proyectos destacados
 
 ### `springboot-course`
 
-Primer proyecto backend del repositorio usando **Spring Boot**. El 10 de agosto se creó e inició el proyecto; se trabajaron los primeros controladores y records:
+Proyecto backend con **Spring Boot**. El 10 de agosto se creó e inició el proyecto; se trabajaron los primeros controladores y records. En el avance más reciente se incorporó una estructura más cercana a una API real mediante arquitectura por capas.
 
 - `HelloController` con endpoints `/hello`, `/saludo` y `/usuario`.
-- `StudentController` con base `/api` y endpoints `/student`, `/course` y `/status`.
+- `StudentController` con base `/api/students`.
+- `StudentService` como capa de servicio.
+- `StudentRepository` como capa de repositorio en memoria.
 - Record `User` para responder información de usuario.
-- Record `Student` para responder información de estudiante.
+- Record `Student` con `id`, nombre, tecnología y día.
+- Record `CreateStudentRequest` para recibir JSON por `POST`.
+- Uso de `GET`, `POST`, `@RequestBody`, `@PathVariable` y `ResponseEntity`.
 - Configuración Maven con Java 21 y Spring Boot 4.1.0.
+
+Endpoints principales actuales:
+
+```text
+GET  /hello
+GET  /saludo
+GET  /usuario
+GET  /api/students
+GET  /api/students/{id}
+POST /api/students
+```
 
 ### `programacion_funcional`
 
@@ -131,7 +151,8 @@ Prácticas de programación funcional en Java:
 - Interfaces funcionales.
 - Reglas de negocio con `ProductRule`.
 - Uso de records `Product` y `Employee`.
-- Primeros ejercicios con streams.
+- Listas con `List.of()`.
+- Primeros ejercicios con streams en `TestStream`.
 
 ### `atencion_de_emergencias`
 
@@ -179,6 +200,12 @@ java App
 ```
 
 ```bash
+cd programacion_funcional/src
+javac TestStream.java
+java TestStream
+```
+
+```bash
 cd atencion_de_emergencias/src
 javac App.java
 java App
@@ -198,15 +225,23 @@ cd springboot-course
 mvnw.cmd spring-boot:run
 ```
 
-Endpoints iniciales:
+Endpoints principales:
 
 ```text
-GET /hello
-GET /saludo
-GET /usuario
-GET /api/student
-GET /api/course
-GET /api/status
+GET  /hello
+GET  /saludo
+GET  /usuario
+GET  /api/students
+GET  /api/students/{id}
+POST /api/students
+```
+
+Ejemplo para crear un estudiante:
+
+```bash
+curl -X POST http://localhost:8080/api/students \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Emilio","technology":"Spring Boot","day":2}'
 ```
 
 ## Requisitos sugeridos
@@ -238,12 +273,18 @@ GET /api/status
 - [x] Inicio de proyecto Spring Boot
 - [x] Controladores REST iniciales
 - [x] Records para respuestas HTTP
-- [ ] Servicios y lógica de negocio en Spring Boot
-- [ ] Persistencia de datos
+- [x] GET y POST en Spring Boot
+- [x] Recepción de JSON con `@RequestBody`
+- [x] Uso de `@PathVariable`
+- [x] Respuestas con `ResponseEntity`
+- [x] Capa de servicio en Spring Boot
+- [x] Capa de repositorio en Spring Boot
+- [ ] Persistencia de datos con base de datos
+- [ ] Validaciones y manejo global de errores
 
 ## Próxima etapa
 
-Continuar el proyecto `springboot-course` agregando servicios, capas de negocio, manejo de peticiones HTTP más completas y eventualmente persistencia de datos.
+Continuar el proyecto `springboot-course` agregando validaciones, operaciones de actualización/eliminación, manejo global de errores y persistencia de datos con una base de datos real.
 
 ## Autor
 
