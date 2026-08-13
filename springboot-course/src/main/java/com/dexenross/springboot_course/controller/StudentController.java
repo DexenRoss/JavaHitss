@@ -4,15 +4,19 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dexenross.springboot_course.model.CreateStudentRequest;
 import com.dexenross.springboot_course.model.Student;
+import com.dexenross.springboot_course.model.UpdateStudentRequest;
 import com.dexenross.springboot_course.service.StudentService;
 
 @RestController
@@ -55,6 +59,46 @@ public class StudentController {
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(student);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Student> update(
+        @PathVariable Long id,
+        @RequestBody UpdateStudentRequest request
+    ){
+        return service.update(
+            id,
+            request.name(), 
+            request.technology(),
+            request.day()
+        )
+        .map(ResponseEntity::ok)
+        .orElseGet(()-> ResponseEntity.notFound().build());
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(
+        @PathVariable Long id
+    ){
+        boolean delete  = service.deleteById(id);
+
+        if (!delete) {
+            return ResponseEntity.notFound().build();
+        }
+
+        return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/search")
+    public List<Student> search(
+        @RequestParam String tech
+    ){
+        return service.findByTechnology(tech);
+    }
+
+    @GetMapping("/sorted")
+    public List<Student> findAllSorterd(){
+        return service.findAllSortedByName();
     }
 
 

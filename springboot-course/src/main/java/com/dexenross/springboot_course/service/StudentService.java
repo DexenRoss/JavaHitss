@@ -29,6 +29,41 @@ public class StudentService {
         String tech,
         int day
     ){
+        if (day < 1) {
+            throw new IllegalArgumentException(
+                "El dia del curso debe ser mayort o igual a 1"
+            );
+        }
         return repository.save(name, tech, day);
+    }
+
+    public Optional<Student> update(
+        Long id,
+        String name,
+        String tech,
+        int day
+    ){
+        Optional<Student> current = repository.findById(id);
+        if (current.isEmpty()) {
+            return Optional.empty();
+        }
+        if (day <current.get().day()) {
+            throw new IllegalArgumentException(
+                "El estudiante no puede retroceder de dia en su aprendizaje"
+            );
+        }
+        return repository.update(id, name, tech, day);
+    }
+
+    public boolean deleteById(Long id){
+        return repository.deleteById(id);
+    }
+
+    public List<Student> findByTechnology(String tech){
+        return repository.findByTechnology(tech);
+    }
+
+    public List<Student> findAllSortedByName(){
+        return repository.findAllSortedName();
     }
 }
