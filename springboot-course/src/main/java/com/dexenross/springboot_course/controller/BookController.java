@@ -16,10 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.dexenross.springboot_course.model.Book;
 import com.dexenross.springboot_course.model.CreateBookRequest;
-import com.dexenross.springboot_course.model.CreateStudentRequest;
-import com.dexenross.springboot_course.model.Student;
 import com.dexenross.springboot_course.model.UpdateBookRequest;
-import com.dexenross.springboot_course.model.UpdateStudentRequest;
+
 import com.dexenross.springboot_course.service.BookService;
 
 import jakarta.validation.Valid;
@@ -53,8 +51,8 @@ public class BookController {
     ){
         Book book = service.create(
             request.isbn(),
-            request.author(),
-            request.title()
+            request.title(),
+            request.author()
         );
 
         return ResponseEntity
