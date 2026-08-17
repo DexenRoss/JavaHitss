@@ -19,6 +19,8 @@ import com.dexenross.springboot_course.model.Student;
 import com.dexenross.springboot_course.model.UpdateStudentRequest;
 import com.dexenross.springboot_course.service.StudentService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/students")
 public class StudentController {
@@ -48,7 +50,7 @@ public class StudentController {
 
     @PostMapping
     public ResponseEntity<Student> create(
-        @RequestBody CreateStudentRequest request
+        @Valid @RequestBody CreateStudentRequest request
     ){
         Student student = service.create(
             request.name(),
@@ -64,7 +66,7 @@ public class StudentController {
     @PutMapping("/{id}")
     public ResponseEntity<Student> update(
         @PathVariable Long id,
-        @RequestBody UpdateStudentRequest request
+        @Valid @RequestBody UpdateStudentRequest request
     ){
         return service.update(
             id,

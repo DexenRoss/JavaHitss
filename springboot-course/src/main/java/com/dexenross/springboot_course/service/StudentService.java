@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import com.dexenross.springboot_course.exception.InvalidStudentStateException;
 import com.dexenross.springboot_course.model.Student;
 import com.dexenross.springboot_course.repository.StudentRepository;
 
@@ -30,7 +31,7 @@ public class StudentService {
         int day
     ){
         if (day < 1) {
-            throw new IllegalArgumentException(
+            throw new InvalidStudentStateException(
                 "El dia del curso debe ser mayort o igual a 1"
             );
         }
@@ -48,7 +49,7 @@ public class StudentService {
             return Optional.empty();
         }
         if (day <current.get().day()) {
-            throw new IllegalArgumentException(
+            throw new InvalidStudentStateException(
                 "El estudiante no puede retroceder de dia en su aprendizaje"
             );
         }
