@@ -5,10 +5,13 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.dexenross.springboot_course.model.Student;
+import com.dexenross.springboot_course.model.Book;
 
 @Repository
-public interface StudentRepository extends JpaRepository<Student,Long>{
+public interface BookRepository extends JpaRepository<Book, Long>{
 
-    List<Student> findByTechnologyIgnoreCase(String technology);
+    boolean existsByIsbn(String isbn);
+
+    List<Book> findByTitle(String title);
+
 }

@@ -3,6 +3,7 @@ package com.dexenross.springboot_course.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.dexenross.springboot_course.exception.InvalidStudentStateException;
@@ -18,7 +19,7 @@ public class StudentService {
     }
 
     public List<Student> showAll(){
-        return repository.showAll();
+        return repository.findAll();
     }
 
     public Optional<Student> findById(Long id){
@@ -30,12 +31,8 @@ public class StudentService {
         String tech,
         int day
     ){
-        if (day < 1) {
-            throw new InvalidStudentStateException(
-                "El dia del curso debe ser mayort o igual a 1"
-            );
-        }
-        return repository.save(name, tech, day);
+        Student s = new Student(name, tech, day);
+        return repository.save(s);
     }
 
     public Optional<Student> update(
@@ -45,26 +42,39 @@ public class StudentService {
         int day
     ){
         Optional<Student> current = repository.findById(id);
+
         if (current.isEmpty()) {
             return Optional.empty();
         }
-        if (day <current.get().day()) {
+
+        Student s = current.get();
+        if (day <s.getDay()) {
             throw new InvalidStudentStateException(
                 "El estudiante no puede retroceder de dia en su aprendizaje"
             );
         }
-        return repository.update(id, name, tech, day);
+        s.update(name, tech, day);
+        Student updated = repository.save(s);
+        
+        return Optional.of(updated);
     }
 
     public boolean deleteById(Long id){
-        return repository.deleteById(id);
+        if (!repository.existsById(id)) {
+            return false;
+        }
+        repository.deleteById(id);
+
+        return true;
     }
 
     public List<Student> findByTechnology(String tech){
-        return repository.findByTechnology(tech);
+        return repository.findByTechnologyIgnoreCase(tech);
     }
 
     public List<Student> findAllSortedByName(){
-        return repository.findAllSortedName();
+        return repository.findAll(
+            Sort.by(Sort.Direction.ASC, "name")
+        );
     }
 }
