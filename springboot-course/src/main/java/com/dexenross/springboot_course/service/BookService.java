@@ -9,6 +9,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.dexenross.springboot_course.dto.BookResponse;
 import com.dexenross.springboot_course.model.Book;
 import com.dexenross.springboot_course.repository.BookRepository;
 
@@ -16,12 +17,25 @@ import com.dexenross.springboot_course.repository.BookRepository;
 public class BookService {
     private final BookRepository repository;
 
+    private BookResponse toResponse(Book book) {
+
+        return new BookResponse(
+                book.getId(),
+                book.getIsbn(),
+                book.getTitle(),
+                book.getAuthor()
+        );
+    }
+
     public BookService(BookRepository r){
         repository = r;
     }
 
-    public List<Book> showAll(){
-        return repository.findAll();
+    public List<BookResponse> showAll(){
+        return repository.findAll()
+                .stream()
+                .map(this::toResponse)
+                .toList();
     }
 
     public Optional<Book> findById(Long id){

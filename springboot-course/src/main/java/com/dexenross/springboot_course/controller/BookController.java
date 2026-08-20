@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.dexenross.springboot_course.dto.BookResponse;
+import com.dexenross.springboot_course.dto.CreateBookRequest;
+import com.dexenross.springboot_course.dto.UpdateBookRequest;
 import com.dexenross.springboot_course.model.Book;
-import com.dexenross.springboot_course.model.CreateBookRequest;
-import com.dexenross.springboot_course.model.UpdateBookRequest;
-
 import com.dexenross.springboot_course.service.BookService;
 
 import jakarta.validation.Valid;
@@ -34,7 +34,7 @@ public class BookController {
     }
 
     @GetMapping
-    public List<Book> showAll(){
+    public List<BookResponse> showAll(){
         return service.showAll();
     }
 

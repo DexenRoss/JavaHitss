@@ -1,4 +1,4 @@
-package com.dexenross.springboot_course.model;
+package com.dexenross.springboot_course.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
