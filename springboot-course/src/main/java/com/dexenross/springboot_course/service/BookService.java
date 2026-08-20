@@ -3,11 +3,13 @@ package com.dexenross.springboot_course.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.dexenross.springboot_course.model.Book;
-import com.dexenross.springboot_course.model.Student;
 import com.dexenross.springboot_course.repository.BookRepository;
 
 @Service
@@ -40,6 +42,7 @@ public class BookService {
         return repository.save(b);
     }
 
+    @Transactional
     public Optional<Book> update(
         Long id,
         String isbn,
@@ -65,8 +68,8 @@ public class BookService {
         return true;
     }
 
-    public List<Book> findByTitle(String title){
-        return repository.findByTitle(title);
+    public Page<Book> findByTitle(String title, Pageable pageable){
+        return repository.findByTitleContainingIgnoringCase(title,pageable);
     }
 
     public List<Book> findAllSortedByName(){
@@ -74,4 +77,10 @@ public class BookService {
             Sort.by(Sort.Direction.ASC, "title")
         );
     }
+
+    public Page<Book> findByAuthor(String author, Pageable pageable){
+        return repository.findByAuthorContainingIgnoreCase(author, pageable);
+    }
+
+
 }

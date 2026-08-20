@@ -2,6 +2,8 @@ package com.dexenross.springboot_course.controller;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -89,14 +91,23 @@ public class BookController {
     }
 
     @GetMapping("/search")
-    public List<Book> search(
-        @RequestParam String title
+    public Page<Book> search(
+        @RequestParam String title,
+        Pageable pageable
     ){
-        return service.findByTitle(title);
+        return service.findByTitle(title,pageable);
     }
 
     @GetMapping("/sorted")
     public List<Book> findAllSorterd(){
         return service.findAllSortedByName();
+    }
+
+    @GetMapping("/search/author")
+    public Page<Book> searchByAuthor(
+            @RequestParam String author,
+            Pageable pageable
+    ) {
+        return service.findByAuthor(author,pageable);
     }
 }
