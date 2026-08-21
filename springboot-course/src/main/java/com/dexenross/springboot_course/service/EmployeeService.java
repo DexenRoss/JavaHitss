@@ -12,6 +12,8 @@ import com.dexenross.springboot_course.repository.EmployeeRepository;
 
 import org.springframework.transaction.annotation.Transactional;
 
+import com.dexenross.springboot_course.exception.ResourceNotFoundException;
+
 @Service
 public class EmployeeService {
 
@@ -64,13 +66,26 @@ public class EmployeeService {
 
     @Transactional(readOnly = true)
     public List<EmployeeResponse> findByDepartment(
-            Long departmentId
+                Long departmentId
     ) {
 
-        return repository
-                .findByDepartmentId(departmentId)
-                .stream()
-                .map(this::toResponse)
-                .toList();
+                return repository
+                        .findByDepartmentId(departmentId)
+                        .stream()
+                        .map(this::toResponse)
+                        .toList();
+    }
+
+        public EmployeeResponse findById(Long id) {
+
+        Employee employee =
+                repository.findById(id)
+                        .orElseThrow(() ->
+                                new ResourceNotFoundException(
+                                        "Employee " + id
+                                )
+                        );
+
+        return toResponse(employee);
     }
 }

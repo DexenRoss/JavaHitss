@@ -15,6 +15,8 @@ import com.dexenross.springboot_course.dto.CreateEmployeeRequest;
 import com.dexenross.springboot_course.dto.EmployeeResponse;
 import com.dexenross.springboot_course.service.EmployeeService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/employees")
 public class EmployeeController {
@@ -29,7 +31,7 @@ public class EmployeeController {
 
     @PostMapping
     public ResponseEntity<EmployeeResponse> create(
-            @RequestBody CreateEmployeeRequest request
+            @Valid @RequestBody CreateEmployeeRequest request
     ) {
 
         EmployeeResponse employee =
@@ -51,4 +53,11 @@ public class EmployeeController {
                 departmentId
         );
     }
+
+    @GetMapping("/{id}")
+    public EmployeeResponse findById(
+        @PathVariable Long id
+    ) {
+        return service.findById(id);
+      }
 }
